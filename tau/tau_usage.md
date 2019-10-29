@@ -53,20 +53,7 @@ Instructions : <https://www.cs.uoregon.edu/research/tau/downloads.php>
 
 ![Dataset selection](../images/tau/dataset_selection.png)
 
-3. Flat profiles 
-
-![Flat profiles](../images/tau/MPI+OPENMP_profiles.png)
-
-4. Context event window 
-
-![Context event window](../images/tau/context_event_window.png)
-
-5. Visualisation 
-
-![TAU window](../images/tau/windows_tau.png)
-
-![Visualising Profiling Data](../images/tau/visualisation_results.png)
-
+---
 
 ###### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
 
@@ -102,9 +89,32 @@ export TAU_OMPT_SUPPORT_LEVEL=full
 export TAU_OMPT_RESOLVE_ADDRESS_EAGERLY=1
 
 
-mpirun -n 16 -x OMP_NUM_THREADS tau_exec  -memory  gmx_mpi mdrun -s lignocellulose-rf.tpr -maxh 0.1 -resethway -noconfout -nsteps 50000 -g logfile
+mpirun -n 16 -x OMP_NUM_THREADS tau_exec -T ompt -ompt gmx_mpi mdrun -s lignocellulose-rf.tpr -maxh 0.1 -resethway -noconfout -nsteps 50000 -g logfile
 
 ```
+For profiling memory allocation, change the mpirun command to include -memory options. 
+
+```
+mpirun -n 16 -x OMP_NUM_THREADS tau_exec -T ompt -ompt -memory gmx_mpi mdrun -s lignocellulose-rf.tpr -maxh 0.1 -resethway -noconfout -nsteps 50000 -g logfile
+
+```
+MPI calls are profiled by default. For OpenMP profiling calls we need to add -ompt flag as shown above. 
+
+1. Flat profiles 
+
+![Flat profiles](../images/tau/MPI+OPENMP_profiles.png)
+
+2. Context event window 
+
+![Context event window](../images/tau/context_event_window.png)
+
+3. Visualisation 
+
+![TAU window](../images/tau/windows_tau.png)
+
+![Visualising Profiling Data](../images/tau/visualisation_results.png)
+
+4. Context event winwdow in case of profiling with -memory option 
 
 
 
