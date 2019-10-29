@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Performance-Analysis-Framwork-guide
 
 This repository is meant to record intstructions for using several performance analysis tools on Cartesius. The following tools are installed currently in newly build software stack. 
@@ -9,3 +10,4 @@ This repository is meant to record intstructions for using several performance a
 5. [TAU (Tuning and Analysis Utility) ](tau/tau_usage.md)
 
 
+>>>>>>> c5a0f29d39fe4d6e765a3a51916dca5f0e116d02
