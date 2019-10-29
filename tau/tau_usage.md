@@ -45,27 +45,27 @@ Instructions : <https://www.cs.uoregon.edu/research/tau/downloads.php>
 
 1. Open Paraprof 
 
-![Open Paraprof](images/tau/OpeningPage.png)
+![Open Paraprof](../images/tau/OpeningPage.png)
 
 2. Open the profiles and select the dataset
 
-![TAU profile type](images/tau/tau_profiles.png)
+![TAU profile type](../images/tau/tau_profiles.png)
 
-![Dataset selection](images/tau/dataset_selection.png)
+![Dataset selection](../images/tau/dataset_selection.png)
 
 3. Flat profiles 
 
-![Flat profiles](images/tau/MPI+OPENMP_profiles.png)
+![Flat profiles](../images/tau/MPI+OPENMP_profiles.png)
 
 4. Context event window 
 
-![Context event window](images/tau/context_event_window.png)
+![Context event window](../images/tau/context_event_window.png)
 
 5. Visualisation 
 
-![TAU window](images/tau/windows_tau.png)
+![TAU window](../images/tau/windows_tau.png)
 
-![Visualising Profiling Data](images/tau/visualisation_results.png)
+![Visualising Profiling Data](../images/tau/visualisation_results.png)
 
 
 ###### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
