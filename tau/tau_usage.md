@@ -43,7 +43,71 @@ TAU compilation is a different process for each kind of profiling and it also de
 
 Instructions : <https://www.cs.uoregon.edu/research/tau/downloads.php>
 
+1. Open Paraprof 
+
+![Open Paraprof](images/tau/OpeningPage.png)
+
+2. Open the profiles and select the dataset
+
+![TAU profile type](images/tau/tau_profiles.png)
+
+![Dataset selection](images/tau/dataset_selection.png)
+
+3. Flat profiles 
+
+![Flat profiles](images/tau/MPI+OPENMP_profiles.png)
+
+4. Context event window 
+
+![Context event window](images/tau/context_event_window.png)
+
+5. Visualisation 
+
+![TAU window](images/tau/windows_tau.png)
+
+![Visualising Profiling Data](images/tau/visualisation_results.png)
+
+
 ###### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
+
+The sample script for profiling gromacs : 
+
+``` 
+#!/bin/bash
+
+#BATCH --job-name="benchmarking_gromacs"
+#SBATCH --time=00:30:00
+#SBATCH -N 2
+#SBATCH -p short
+
+module purge
+module load 2019
+module load GROMACS/2019.3-foss-2018b
+module load PAPI/5.7.0-GCCcore-7.3.0
+module load PDT/3.25-foss-2018b
+module load CMake/3.12.1-GCCcore-7.3.0
+
+#set TAU environment
+export TAU_HOME=/home/path/to/tau-2.28.2/build/x86_64
+export TAU_MAKEFILE=/home/path/to/tau-2.28.2/build/x86_64/lib/Makefile.tau-papi-ompt-tr4-mpi-pdt-openmp
+export PATH=$TAU_HOME/bin:$PATH
+
+export TAU_COMM_MATRIX=1
+export TAU_THROTTLE=1
+export OMP_NUM_THREADS=4
+export TRACK_MEMORY_FOOTPRINT=1
+export TAU_SAMPLING=1
+export TAU_VERBOSE=1
+export TAU_OMPT_SUPPORT_LEVEL=full
+export TAU_OMPT_RESOLVE_ADDRESS_EAGERLY=1
+
+
+mpirun -n 16 -x OMP_NUM_THREADS tau_exec  -memory  gmx_mpi mdrun -s lignocellulose-rf.tpr -maxh 0.1 -resethway -noconfout -nsteps 50000 -g logfile
+
+```
+
+
+
 ###### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
 ###### Benchmark application for MPI + OpenMP + CUDA + Python : Tensorflow with Horovod + MPI with CUDA support 
 
