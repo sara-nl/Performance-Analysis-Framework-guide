@@ -1,0 +1,381 @@
+274 templated_functions_MULTI_TIME
+# Name Calls Subrs Excl Incl ProfileCalls # <metadata><attribute><name>Metric Name</name><value>TIME</value></attribute><attribute><name>CPU Cores</name><value>12</value></attribute><attribute><name>CPU MHz</name><value>3099.877</value></attribute><attribute><name>CPU Type</name><value>Intel(R) Xeon(R) CPU E5-2690 v3 @ 2.60GHz</value></attribute><attribute><name>CPU Vendor</name><value>GenuineIntel</value></attribute><attribute><name>CWD</name><value>/nfs/home6/sagard/soil_benchmarks_codes/gromacs/run</value></attribute><attribute><name>Cache Size</name><value>30720 KB</value></attribute><attribute><name>Command Line</name><value>gmx_mpi mdrun -s lignocellulose-rf.tpr -maxh 0.1 -resethway -noconfout -nsteps 50000 -g logfile</value></attribute><attribute><name>Ending Timestamp</name><value>1572347053031943</value></attribute><attribute><name>Executable</name><value>/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi</value></attribute><attribute><name>Hostname</name><value>tcn567.bullx</value></attribute><attribute><name>Local Time</name><value>2019-10-29T11:58:00+01:00</value></attribute><attribute><name>MPI Processor Name</name><value>tcn567.bullx</value></attribute><attribute><name>Memory Size</name><value>65564980 kB</value></attribute><attribute><name>Node Name</name><value>tcn567.bullx</value></attribute><attribute><name>OMP_CHUNK_SIZE</name><value>1</value></attribute><attribute><name>OMP_DYNAMIC</name><value>off</value></attribute><attribute><name>OMP_MAX_THREADS</name><value>4</value></attribute><attribute><name>OMP_NESTED</name><value>off</value></attribute><attribute><name>OMP_NUM_PROCS</name><value>12</value></attribute><attribute><name>OMP_SCHEDULE</name><value>UNKNOWN</value></attribute><attribute><name>OS Machine</name><value>x86_64</value></attribute><attribute><name>OS Name</name><value>Linux</value></attribute><attribute><name>OS Release</name><value>3.10.0-957.27.2.el7.x86_64</value></attribute><attribute><name>OS Version</name><value>#1 SMP Tue Jul 9 16:53:14 UTC 2019</value></attribute><attribute><name>Starting Timestamp</name><value>1572346680840383</value></attribute><attribute><name>TAU Architecture</name><value>default</value></attribute><attribute><name>TAU Config</name><value> -prefix=/home/sagard/tau-2.28.2/build -mpi -pdt=/sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/PDT/3.25-foss-2018b -papi=/sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/PAPI/5.7.0-GCCcore-7.3.0 -ompt=download</value></attribute><attribute><name>TAU Makefile</name><value>/home/sagard/tau-2.28.2/build/x86_64/lib/Makefile.tau-papi-ompt-tr4-mpi-pdt-openmp</value></attribute><attribute><name>TAU Version</name><value>2.28.2-git</value></attribute><attribute><name>TAU_BFD_LOOKUP</name><value>on</value></attribute><attribute><name>TAU_CALLPATH</name><value>off</value></attribute><attribute><name>TAU_CALLPATH_DEPTH</name><value>2</value></attribute><attribute><name>TAU_CALLSITE_DEPTH</name><value>1</value></attribute><attribute><name>TAU_COMM_MATRIX</name><value>on</value></attribute><attribute><name>TAU_COMPENSATE</name><value>off</value></attribute><attribute><name>TAU_CUDA_BINARY_EXE</name><value></value></attribute><attribute><name>TAU_CUPTI_API</name><value>runtime</value></attribute><attribute><name>TAU_EBS_INCLUSIVE</name><value>0 usec</value></attribute><attribute><name>TAU_EBS_KEEP_UNRESOLVED_ADDR</name><value>off</value></attribute><attribute><name>TAU_EBS_PERIOD</name><value>30000</value></attribute><attribute><name>TAU_EBS_SAMPLES_DROPPED_SUSPENDED_0</name><value>0</value></attribute><attribute><name>TAU_EBS_SAMPLES_DROPPED_TAU_0</name><value>9</value></attribute><attribute><name>TAU_EBS_SAMPLES_TAKEN_0</name><value>12292</value></attribute><attribute><name>TAU_IBM_BG_HWP_COUNTERS</name><value>off</value></attribute><attribute><name>TAU_MAX_THREADS</name><value>128</value></attribute><attribute><name>TAU_MEASURE_TAU</name><value>off</value></attribute><attribute><name>TAU_MEMDBG_PROTECT_ABOVE</name><value>off</value></attribute><attribute><name>TAU_MEMDBG_PROTECT_BELOW</name><value>off</value></attribute><attribute><name>TAU_MEMDBG_PROTECT_FREE</name><value>off</value></attribute><attribute><name>TAU_OPENMP_RUNTIME</name><value>on</value></attribute><attribute><name>TAU_OPENMP_RUNTIME_EVENTS</name><value>on</value></attribute><attribute><name>TAU_OPENMP_RUNTIME_STATES</name><value>off</value></attribute><attribute><name>TAU_OUTPUT_CUDA_CSV</name><value>off</value></attribute><attribute><name>TAU_PAPI_MULTIPLEXING</name><value>off</value></attribute><attribute><name>TAU_PROFILE</name><value>on</value></attribute><attribute><name>TAU_PROFILE_FORMAT</name><value>profile</value></attribute><attribute><name>TAU_REGION_ADDRESSES</name><value>off</value></attribute><attribute><name>TAU_SAMPLING</name><value>on</value></attribute><attribute><name>TAU_SHOW_MEMORY_FUNCTIONS</name><value>off</value></attribute><attribute><name>TAU_SIGNALS_GDB</name><value>off</value></attribute><attribute><name>TAU_THROTTLE</name><value>on</value></attribute><attribute><name>TAU_THROTTLE_NUMCALLS</name><value>100000</value></attribute><attribute><name>TAU_THROTTLE_PERCALL</name><value>10</value></attribute><attribute><name>TAU_TRACE</name><value>off</value></attribute><attribute><name>TAU_TRACE_FORMAT</name><value>tau</value></attribute><attribute><name>TAU_TRACK_CUDA_CDP</name><value>off</value></attribute><attribute><name>TAU_TRACK_CUDA_ENV</name><value>off</value></attribute><attribute><name>TAU_TRACK_CUDA_INSTRUCTIONS</name><value></value></attribute><attribute><name>TAU_TRACK_CUDA_SASS</name><value>off</value></attribute><attribute><name>TAU_TRACK_HEADROOM</name><value>off</value></attribute><attribute><name>TAU_TRACK_HEAP</name><value>on</value></attribute><attribute><name>TAU_TRACK_IO_PARAMS</name><value>off</value></attribute><attribute><name>TAU_TRACK_MEMORY_FOOTPRINT</name><value>off</value></attribute><attribute><name>TAU_TRACK_MEMORY_LEAKS</name><value>on</value></attribute><attribute><name>TAU_TRACK_MESSAGE</name><value>on</value></attribute><attribute><name>TAU_TRACK_SIGNALS</name><value>off</value></attribute><attribute><name>TAU_TRACK_UNIFIED_MEMORY</name><value>off</value></attribute><attribute><name>TAU_VERBOSE</name><value>on</value></attribute><attribute><name>Timestamp</name><value>1572346680840465</value></attribute><attribute><name>UTC Time</name><value>2019-10-29T10:58:00Z</value></attribute><attribute><name>pid</name><value>31803</value></attribute><attribute><name>tid</name><value>31803</value></attribute><attribute><name>username</name><value>sagard</value></attribute></metadata>
+".TAU application" 1 12422 253842373 372420914 0 GROUP="TAU_USER" 
+"MPI_Finalized()" 1 0 43 43 0 GROUP="MPI" 
+"MPI_Init_thread()  " 1 0 422422 422422 0 GROUP="MPI" 
+"MPI_Comm_size()  " 7 0 29 29 0 GROUP="MPI" 
+"MPI_Bcast()  " 2318 0 2082926 2082926 0 GROUP="MPI" 
+"MPI_Comm_rank()  " 8 0 29 29 0 GROUP="MPI" 
+"MPI_Get_processor_name()  " 2 0 24 24 0 GROUP="MPI" 
+"MPI_Comm_split()  " 4 0 6717 6717 0 GROUP="MPI" 
+"MPI_Allreduce()  " 270 0 4710537 4710537 0 GROUP="MPI" 
+"MPI_Comm_free()  " 3 0 274 274 0 GROUP="MPI" 
+"MPI_Gather()  " 41 0 646 646 0 GROUP="MPI" 
+"MPI_Barrier()  " 2 0 1700 1700 0 GROUP="MPI" 
+"MPI_Scan()  " 1 0 215 215 0 GROUP="MPI" 
+"MPI_Scatter()  " 2 0 165365 165365 0 GROUP="MPI" 
+"MPI_Scatterv()  " 6 0 121944 121944 0 GROUP="MPI" 
+"MPI_Sendrecv()  " 3362 0 99722686 99722686 0 GROUP="MPI" 
+"MPI_Irecv()  " 2552 0 22738 22738 0 GROUP="MPI" 
+"MPI_Isend()  " 2552 0 12881 12881 0 GROUP="MPI" 
+"MPI_Waitall()  " 1276 0 11004384 11004384 0 GROUP="MPI" 
+"MPI_Recv()  " 10 0 5940 5940 0 GROUP="MPI" 
+"MPI_Gatherv()  " 3 0 66647 66647 0 GROUP="MPI" 
+"MPI_Finalize()  " 1 0 230394 230394 0 GROUP="MPI" 
+"[CONTEXT] .TAU application" 8320 0 0 253973842 0 GROUP="TAU_SAMPLE_CONTEXT" 
+".TAU application  => [CONTEXT] .TAU application" 8320 0 0 253973842 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"[SAMPLE] __vfwprintf [{} {0}]" 2 0 56327 56327 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __vfwprintf [{} {0}]" 2 0 56327 56327 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] do_spin [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/wait.h} {56}]" 434 0 12426976 12426976 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] do_spin [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/wait.h} {56}]" 434 0 12426976 12426976 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_kernel_ElecRF_VdwLJCombLB_F_4xn(nbnxn_pairlist_t const*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*) [3], float*, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 3119 0 92731049 92731049 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_kernel_ElecRF_VdwLJCombLB_F_4xn(nbnxn_pairlist_t const*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*) [3], float*, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 3119 0 92731049 92731049 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_move_f(gmx_domdec_t*, gmx::ArrayRef<gmx::BasicVector<float> >, float (*) [3], gmx_wallcycle*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 13 0 384768 384768 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_move_f(gmx_domdec_t*, gmx::ArrayRef<gmx::BasicVector<float> >, float (*) [3], gmx_wallcycle*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 13 0 384768 384768 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] make_dd_indices(gmx_domdec_t*, int const*, int) [{partition.cpp} {0}]" 69 0 2058337 2058337 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] make_dd_indices(gmx_domdec_t*, int const*, int) [{partition.cpp} {0}]" 69 0 2058337 2058337 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_kernel_prune_4xn(nbnxn_pairlist_t*, nbnxn_atomdata_t const*, float const (*) [3], float) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 239 0 7506421 7506421 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_kernel_prune_4xn(nbnxn_pairlist_t*, nbnxn_atomdata_t const*, float const (*) [3], float) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 239 0 7506421 7506421 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_partition_system(_IO_FILE*, gmx::MDLogger const&, long, t_commrec const*, bool, int, t_state*, gmx_mtop_t const*, t_inputrec const*, t_state*, gmx::PaddedVector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy> >*, gmx::MDAtoms*, gmx_localtop_t*, t_forcerec*, gmx_vsite_t*, gmx::Constraints*, t_nrnb*, gmx_wallcycle*, bool) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 7 0 208257 208257 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_partition_system(_IO_FILE*, gmx::MDLogger const&, long, t_commrec const*, bool, int, t_state*, gmx_mtop_t const*, t_inputrec const*, t_state*, gmx::PaddedVector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy> >*, gmx::MDAtoms*, gmx_localtop_t*, t_forcerec*, gmx_vsite_t*, gmx::Constraints*, t_nrnb*, gmx_wallcycle*, bool) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 7 0 208257 208257 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_make_pairlist_part(nbnxn_search const*, nbnxn_grid_t const*, nbnxn_grid_t const*, nbnxn_search_work_t*, nbnxn_atomdata_t const*, t_blocka const&, float, int, int, bool, int, bool, float, int, int, nbnxn_pairlist_t*, t_nblist*) [{nbnxn_search.cpp} {0}]" 319 0 9668412 9668412 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_make_pairlist_part(nbnxn_search const*, nbnxn_grid_t const*, nbnxn_grid_t const*, nbnxn_search_work_t*, nbnxn_atomdata_t const*, t_blocka const&, float, int, int, bool, int, bool, float, int, int, nbnxn_pairlist_t*, t_nblist*) [{nbnxn_search.cpp} {0}]" 319 0 9668412 9668412 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_atomdata_add_nbat_f_to_f_stdreduce(nbnxn_atomdata_t const*, int) [clone ._omp_fn.3] [{nbnxn_atomdata.cpp} {0}]" 16 0 446604 446604 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_atomdata_add_nbat_f_to_f_stdreduce(nbnxn_atomdata_t const*, int) [clone ._omp_fn.3] [{nbnxn_atomdata.cpp} {0}]" 16 0 446604 446604 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] do_force_lowlevel(t_forcerec*, t_inputrec const*, t_idef const*, t_commrec const*, gmx_multisim_t const*, t_nrnb*, gmx_wallcycle*, t_mdatoms const*, float (*) [3], history_t*, float (*) [3], gmx::ForceWithVirial*, gmx_enerdata_t*, t_fcdata*, float (*) [3], t_lambda*, float*, t_graph const*, t_blocka const*, float (*) [3], int, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29116 29116 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] do_force_lowlevel(t_forcerec*, t_inputrec const*, t_idef const*, t_commrec const*, gmx_multisim_t const*, t_nrnb*, gmx_wallcycle*, t_mdatoms const*, float (*) [3], history_t*, float (*) [3], gmx::ForceWithVirial*, gmx_enerdata_t*, t_fcdata*, float (*) [3], t_lambda*, float*, t_graph const*, t_blocka const*, float (*) [3], int, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29116 29116 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] copy_rvec_to_nbat_real(int const*, int, int, float const (*) [3], int, float*, int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 21 0 619633 619633 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] copy_rvec_to_nbat_real(int const*, int, int, float const (*) [3], int, float*, int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 21 0 619633 619633 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] void gmx::settleTemplate<gmx::SimdFloat, gmx::SimdFBool, 8, float const*, true, true>(gmx::settledata const*, int, int, float const*, float const*, float*, float, float*, float (*) [3], bool*) [{settle.cpp} {0}]" 6 0 179783 179783 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] void gmx::settleTemplate<gmx::SimdFloat, gmx::SimdFBool, 8, float const*, true, true>(gmx::settledata const*, int, int, float const*, float const*, float*, float, float*, float (*) [3], bool*) [{settle.cpp} {0}]" 6 0 179783 179783 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] calc_ke_part_normal(float const (*) [3], t_grpopts const*, t_mdatoms const*, gmx_ekindata_t*, t_nrnb*, bool) [clone ._omp_fn.0] [{update.cpp} {0}]" 4 0 119298 119298 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] calc_ke_part_normal(float const (*) [3], t_grpopts const*, t_mdatoms const*, gmx_ekindata_t*, t_nrnb*, bool) [clone ._omp_fn.0] [{update.cpp} {0}]" 4 0 119298 119298 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] clear_f(nbnxn_atomdata_t const*, int, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 11 0 299504 299504 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] clear_f(nbnxn_atomdata_t const*, int, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 11 0 299504 299504 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] clear_rvecs_omp(int, float (*) [3]) [clone ._omp_fn.0] [{sim_util.cpp} {0}]" 7 0 208669 208669 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] clear_rvecs_omp(int, float (*) [3]) [clone ._omp_fn.0] [{sim_util.cpp} {0}]" 7 0 208669 208669 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] finish_update(t_inputrec const*, t_mdatoms const*, t_state*, t_graph const*, t_nrnb*, gmx_wallcycle*, gmx_update_t*, gmx::Constraints const*) [clone ._omp_fn.2] [{update.cpp} {0}]" 2 0 60007 60007 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] finish_update(t_inputrec const*, t_mdatoms const*, t_state*, t_graph const*, t_nrnb*, gmx_wallcycle*, gmx_update_t*, gmx::Constraints const*) [clone ._omp_fn.2] [{update.cpp} {0}]" 2 0 60007 60007 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] futex_wait [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h} {44}]" 2189 0 71734281 71734281 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] futex_wait [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h} {44}]" 2189 0 71734281 71734281 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_put_on_grid(nbnxn_search*, int, float const (*) [3], int, float const*, float const*, gmx::UpdateGroupsCog const*, int, int, float, int const*, gmx::ArrayRef<gmx::BasicVector<float> const>, int, int const*, int, nbnxn_atomdata_t*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29326 29326 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_put_on_grid(nbnxn_search*, int, float const (*) [3], int, float const*, float const*, gmx::UpdateGroupsCog const*, int, int, float, int const*, gmx::ArrayRef<gmx::BasicVector<float> const>, int, int const*, int, nbnxn_atomdata_t*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29326 29326 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] void gmx::settleTemplate<gmx::SimdFloat, gmx::SimdFBool, 8, float const*, true, false>(gmx::settledata const*, int, int, float const*, float const*, float*, float, float*, float (*) [3], bool*) [clone .isra.5] [{settle.cpp} {0}]" 30 0 886831 886831 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] void gmx::settleTemplate<gmx::SimdFloat, gmx::SimdFBool, 8, float const*, true, false>(gmx::settledata const*, int, int, float const*, float const*, float*, float, float*, float (*) [3], bool*) [clone .isra.5] [{settle.cpp} {0}]" 30 0 886831 886831 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_redistribute_cg(_IO_FILE*, long, gmx_domdec_t*, int*, t_state*, gmx::PaddedVector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy> >*, t_forcerec*, t_nrnb*, int*) [clone ._omp_fn.0] [{redistribute.cpp} {0}]" 3 0 92373 92373 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_redistribute_cg(_IO_FILE*, long, gmx_domdec_t*, int*, t_state*, gmx::PaddedVector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy> >*, t_forcerec*, t_nrnb*, int*) [clone ._omp_fn.0] [{redistribute.cpp} {0}]" 3 0 92373 92373 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_kernel_ElecRF_VdwLJCombLB_VF_4xn(nbnxn_pairlist_t const*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*) [3], float*, float*, float*, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 42 0 1213566 1213566 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_kernel_ElecRF_VdwLJCombLB_VF_4xn(nbnxn_pairlist_t const*, nbnxn_atomdata_t const*, interaction_const_t const*, float (*) [3], float*, float*, float*, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 42 0 1213566 1213566 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_move_x_specat(gmx_domdec_t*, gmx_domdec_specat_comm_t*, float const (*) [3], float (*) [3], float (*) [3], bool) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 60003 60003 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_move_x_specat(gmx_domdec_t*, gmx_domdec_specat_comm_t*, float const (*) [3], float (*) [3], float (*) [3], bool) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 60003 60003 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_set_atomorder(nbnxn_search*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30006 30006 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_set_atomorder(nbnxn_search*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30006 30006 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __atanf [{} {0}]" 2 0 57359 57359 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __atanf [{} {0}]" 2 0 57359 57359 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __tls_get_addr [{/usr/lib64/ld-2.17.so} {0}]" 1 0 30004 30004 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __tls_get_addr [{/usr/lib64/ld-2.17.so} {0}]" 1 0 30004 30004 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] futex_wait [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h} {39}]" 1071 0 32394565 32394565 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] futex_wait [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h} {39}]" 1071 0 32394565 32394565 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] bonds(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], float (*) [3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 51756 51756 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] bonds(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], float (*) [3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 51756 51756 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] calcBondedForces(t_idef const*, float const (*) [3], t_forcerec const*, t_pbc const*, t_graph const*, gmx_enerdata_t*, t_nrnb*, float const*, float*, t_mdatoms const*, t_fcdata*, bool, int*) [clone ._omp_fn.0] [{listed-forces.cpp} {0}]" 4 0 114187 114187 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] calcBondedForces(t_idef const*, float const (*) [3], t_forcerec const*, t_pbc const*, t_graph const*, gmx_enerdata_t*, t_nrnb*, float const*, float*, t_mdatoms const*, t_fcdata*, bool, int*) [clone ._omp_fn.0] [{listed-forces.cpp} {0}]" 4 0 114187 114187 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] update_coords(long, t_inputrec const*, t_mdatoms const*, t_state*, gmx::ArrayRefWithPadding<gmx::BasicVector<float> >, t_fcdata const*, gmx_ekindata_t const*, float const (*) [3], gmx_update_t*, int, t_commrec const*, gmx::Constraints const*) [clone ._omp_fn.3] [{update.cpp} {0}]" 12 0 349272 349272 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] update_coords(long, t_inputrec const*, t_mdatoms const*, t_state*, gmx::ArrayRefWithPadding<gmx::BasicVector<float> >, t_fcdata const*, gmx_ekindata_t const*, float const (*) [3], gmx_update_t*, int, t_commrec const*, gmx::Constraints const*) [clone ._omp_fn.3] [{update.cpp} {0}]" 12 0 349272 349272 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] atoms2md(gmx_mtop_t const*, t_inputrec const*, int, int const*, int, gmx::MDAtoms*) [clone ._omp_fn.0] [{mdatoms.cpp} {0}]" 6 0 175785 175785 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] atoms2md(gmx_mtop_t const*, t_inputrec const*, int, int const*, int, gmx::MDAtoms*) [clone ._omp_fn.0] [{mdatoms.cpp} {0}]" 6 0 175785 175785 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] make_local_bondeds_excls(gmx_domdec_t*, gmx_domdec_zones_t*, gmx_mtop_t const*, int const*, bool, int*, bool, float, int*, t_pbc*, float (*) [3], t_idef*, gmx_vsite_t*, t_blocka*, int*) [clone ._omp_fn.0] [{domdec_topology.cpp} {0}]" 22 0 683255 683255 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] make_local_bondeds_excls(gmx_domdec_t*, gmx_domdec_zones_t*, gmx_mtop_t const*, int const*, bool, int*, bool, float, int*, t_pbc*, float (*) [3], t_idef*, gmx_vsite_t*, t_blocka*, int*) [clone ._omp_fn.0] [{domdec_topology.cpp} {0}]" 22 0 683255 683255 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_sort_state(gmx_domdec_t*, float (*) [3], t_forcerec*, t_state*, int) [{partition.cpp} {0}]" 4 0 118872 118872 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_sort_state(gmx_domdec_t*, float (*) [3], t_forcerec*, t_state*, int) [{partition.cpp} {0}]" 4 0 118872 118872 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] order_vec_atom(gmx::RangePartitioning const*, gmx::ArrayRef<gmx_cgsort_t const>, gmx::ArrayRef<gmx::BasicVector<float> >, gmx::ArrayRef<gmx::BasicVector<float> >) [clone .isra.175] [{partition.cpp} {0}]" 5 0 147654 147654 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] order_vec_atom(gmx::RangePartitioning const*, gmx::ArrayRef<gmx_cgsort_t const>, gmx::ArrayRef<gmx::BasicVector<float> >, gmx::ArrayRef<gmx::BasicVector<float> >) [clone .isra.175] [{partition.cpp} {0}]" 5 0 147654 147654 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] fgets [{/usr/lib64/libc-2.17.so} {0}]" 1 0 59999 59999 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] fgets [{/usr/lib64/libc-2.17.so} {0}]" 1 0 59999 59999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] rebalanceSimpleLists(int, nbnxn_pairlist_t* const*, nbnxn_pairlist_t**, gmx::ArrayRef<nbnxn_search_work_t>) [clone ._omp_fn.4] [{nbnxn_search.cpp} {0}]" 1 0 30001 30001 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] rebalanceSimpleLists(int, nbnxn_pairlist_t* const*, nbnxn_pairlist_t**, gmx::ArrayRef<nbnxn_search_work_t>) [clone ._omp_fn.4] [{nbnxn_search.cpp} {0}]" 1 0 30001 30001 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] (anonymous namespace)::reduce_thread_forces(int, float (*) [3], bonded_threading_t*, int) [clone ._omp_fn.1] [{listed-forces.cpp} {0}]" 2 0 58419 58419 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] (anonymous namespace)::reduce_thread_forces(int, float (*) [3], bonded_threading_t*, int) [clone ._omp_fn.1] [{listed-forces.cpp} {0}]" 2 0 58419 58419 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __open_nocancel [{} {0}]" 2 0 58051 58051 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __open_nocancel [{} {0}]" 2 0 58051 58051 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] sort_atoms(int, bool, int, bool, int*, int, gmx::ArrayRef<gmx::BasicVector<float> const>, float, float, int, gmx::ArrayRef<int>) [clone .constprop.163] [{nbnxn_grid.cpp} {0}]" 5 0 175915 175915 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] sort_atoms(int, bool, int, bool, int*, int, gmx::ArrayRef<gmx::BasicVector<float> const>, float, float, int, gmx::ArrayRef<int>) [clone .constprop.163] [{nbnxn_grid.cpp} {0}]" 5 0 175915 175915 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __read_nocancel [{} {0}]" 1 0 30905 30905 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __read_nocancel [{} {0}]" 1 0 30905 30905 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] gmx_string_hash_func(char const*, unsigned int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30001 30001 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] gmx_string_hash_func(char const*, unsigned int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30001 30001 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_atomdata_set(nbnxn_atomdata_t*, nbnxn_search const*, t_mdatoms const*, int const*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 3 0 77363 77363 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_atomdata_set(nbnxn_atomdata_t*, nbnxn_search const*, t_mdatoms const*, int const*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 3 0 77363 77363 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] gmx::make_at2con(int, t_ilist const*, t_iparams const*, gmx::FlexibleConstraintTreatment) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] gmx::make_at2con(int, t_ilist const*, t_iparams const*, gmx::FlexibleConstraintTreatment) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_move_x(gmx_domdec_t*, float (*) [3], gmx::ArrayRef<gmx::BasicVector<float> >, gmx_wallcycle*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 8 0 238899 238899 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_move_x(gmx_domdec_t*, float (*) [3], gmx::ArrayRef<gmx::BasicVector<float> >, gmx_wallcycle*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 8 0 238899 238899 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_atomdata_add_nbat_f_to_f(nbnxn_search*, int, nbnxn_atomdata_t const*, float (*) [3], gmx_wallcycle*) [clone ._omp_fn.1] [{nbnxn_atomdata.cpp} {0}]" 7 0 196265 196265 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_atomdata_add_nbat_f_to_f(nbnxn_search*, int, nbnxn_atomdata_t const*, float (*) [3], gmx_wallcycle*) [clone ._omp_fn.1] [{nbnxn_atomdata.cpp} {0}]" 7 0 196265 196265 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] inputrecNeedMutot(t_inputrec const*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30010 30010 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] inputrecNeedMutot(t_inputrec const*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30010 30010 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] pdihs(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], float (*) [3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 53961 53961 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] pdihs(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], float (*) [3], t_pbc const*, t_graph const*, float, float*, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 53961 53961 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] gmx::lincs_matrix_expand(gmx::Lincs const*, gmx::Task const*, float const*, float*, float*, float*) [{lincs.cpp} {0}]" 2 0 56264 56264 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] gmx::lincs_matrix_expand(gmx::Lincs const*, gmx::Task const*, float const*, float*, float*, float*) [{lincs.cpp} {0}]" 2 0 56264 56264 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] do_spin [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/wait.h} {57}]" 571 0 16352627 16352627 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] do_spin [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/wait.h} {57}]" 571 0 16352627 16352627 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] atoms_to_constraints(gmx_domdec_t*, gmx_mtop_t const*, int const*, gmx::ArrayRef<t_blocka const>, int, t_ilist*, std::vector<int, std::allocator<int> >*) [clone .isra.142] [{domdec_constraints.cpp} {0}]" 1 0 29992 29992 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] atoms_to_constraints(gmx_domdec_t*, gmx_mtop_t const*, int const*, gmx::ArrayRef<t_blocka const>, int, t_ilist*, std::vector<int, std::allocator<int> >*) [clone .isra.142] [{domdec_constraints.cpp} {0}]" 1 0 29992 29992 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 27697 27697 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] void std::vector<int, std::allocator<int> >::emplace_back<int>(int&&) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 27697 27697 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] do_pairs(int, int, int const*, t_iparams const*, float const (*) [3], float (*) [4], float (*) [3], t_pbc const*, t_graph const*, float const*, float*, t_mdatoms const*, t_forcerec const*, bool, gmx_grppairener_t*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 4 0 111741 111741 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] do_pairs(int, int, int const*, t_iparams const*, float const (*) [3], float (*) [4], float (*) [3], t_pbc const*, t_graph const*, float const*, float*, t_mdatoms const*, t_forcerec const*, bool, gmx_grppairener_t*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 4 0 111741 111741 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] setup_bonded_threading(bonded_threading_t*, int, bool, t_idef const&) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 28380 28380 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] setup_bonded_threading(bonded_threading_t*, int, bool, t_idef const&) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 28380 28380 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __GI___fxstatat64 [{} {0}]" 1 0 29047 29047 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __GI___fxstatat64 [{} {0}]" 1 0 29047 29047 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] check_cell_list_space_simple(nbnxn_pairlist_t*, int) [{nbnxn_search.cpp} {0}]" 1 0 30526 30526 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] check_cell_list_space_simple(nbnxn_pairlist_t*, int) [{nbnxn_search.cpp} {0}]" 1 0 30526 30526 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] dd_make_local_top(gmx_domdec_t*, gmx_domdec_zones_t*, int, float (*) [3], float*, int const*, t_forcerec*, float (*) [3], gmx_vsite_t*, gmx_mtop_t const*, gmx_localtop_t*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 58817 58817 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] dd_make_local_top(gmx_domdec_t*, gmx_domdec_zones_t*, int, float (*) [3], float*, int const*, t_forcerec*, float (*) [3], gmx_vsite_t*, gmx_mtop_t const*, gmx_localtop_t*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 58817 58817 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] nbnxn_make_pairlist(nbnxn_search*, nbnxn_atomdata_t*, t_blocka const*, float, int, nbnxn_pairlist_set_t*, int, int, t_nrnb*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29169 29169 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] nbnxn_make_pairlist(nbnxn_search*, nbnxn_atomdata_t*, t_blocka const*, float, int, nbnxn_pairlist_set_t*, int, int, t_nrnb*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29169 29169 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __sched_setaffinity_new [{} {0}]" 1 0 31922 31922 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __sched_setaffinity_new [{} {0}]" 1 0 31922 31922 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] setup_specat_communication(gmx_domdec_t*, std::vector<int, std::allocator<int> >*, gmx_domdec_specat_comm_t*, gmx::HashedMap<int>*, int, int, char const*, char const*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 5 0 150007 150007 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] setup_specat_communication(gmx_domdec_t*, std::vector<int, std::allocator<int> >*, gmx_domdec_specat_comm_t*, gmx::HashedMap<int>*, int, int, char const*, char const*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 5 0 150007 150007 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] getGroupType(gmx_groups_t const*, int, int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] getGroupType(gmx_groups_t const*, int, int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] calc_cell_indices(nbnxn_search*, int, nbnxn_grid_t*, gmx::UpdateGroupsCog const*, int, int, int const*, gmx::ArrayRef<gmx::BasicVector<float> const>, int, int const*, nbnxn_atomdata_t*) [clone ._omp_fn.0] [{nbnxn_grid.cpp} {0}]" 1 0 27471 27471 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] calc_cell_indices(nbnxn_search*, int, nbnxn_grid_t*, gmx::UpdateGroupsCog const*, int, int, int const*, gmx::ArrayRef<gmx::BasicVector<float> const>, int, int const*, nbnxn_atomdata_t*) [clone ._omp_fn.0] [{nbnxn_grid.cpp} {0}]" 1 0 27471 27471 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] futex_wake [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h} {66}]" 5 0 148376 148376 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] futex_wake [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/x86/futex.h} {66}]" 5 0 148376 148376 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] do_spin [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/wait.h} {52}]" 1 0 29032 29032 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] do_spin [{/scratch/nodespecific/tcn900/jenkins/regression/build/GCCcore/7.3.0/dummy-/gcc-7.3.0/stage3_obj/x86_64-pc-linux-gnu/libgomp/../../../libgomp/config/linux/wait.h} {52}]" 1 0 29032 29032 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] gmx::lincs_update_atoms_ind(int, int const*, int const*, float, float const*, float (*) [3], float const*, float (*) [3]) [{lincs.cpp} {0}]" 1 0 29999 29999 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] gmx::lincs_update_atoms_ind(int, int const*, int const*, float, float const*, float (*) [3], float const*, float (*) [3]) [{lincs.cpp} {0}]" 1 0 29999 29999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] pdihs_noener_simd(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], t_pbc const*, t_graph const*, float, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 60004 60004 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] pdihs_noener_simd(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], t_pbc const*, t_graph const*, float, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 60004 60004 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] pbc_dx_aiuc(t_pbc const*, float const*, float const*, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 54199 54199 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] pbc_dx_aiuc(t_pbc const*, float const*, float const*, float*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 54199 54199 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] gmx::do_lincs(float const (*) [3], float (*) [3], float (*) [3], t_pbc*, gmx::Lincs*, int, float const*, t_commrec const*, bool, float, bool*, float, float (*) [3], bool, float (*) [3]) [{lincs.cpp} {0}]" 1 0 31393 31393 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] gmx::do_lincs(float const (*) [3], float (*) [3], float (*) [3], t_pbc*, gmx::Lincs*, int, float const*, t_commrec const*, bool, float, bool*, float, float (*) [3], bool, float (*) [3]) [{lincs.cpp} {0}]" 1 0 31393 31393 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] setup_dd_communication(gmx_domdec_t*, float (*) [3], gmx_ddbox_t*, t_forcerec*, t_state*, gmx::PaddedVector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy> >*) [clone ._omp_fn.0] [{partition.cpp} {0}]" 1 0 30007 30007 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] setup_dd_communication(gmx_domdec_t*, float (*) [3], gmx_ddbox_t*, t_forcerec*, t_state*, gmx::PaddedVector<gmx::BasicVector<float>, gmx::Allocator<gmx::BasicVector<float>, gmx::AlignedAllocationPolicy> >*) [clone ._omp_fn.0] [{partition.cpp} {0}]" 1 0 30007 30007 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] urey_bradley_noener_simd(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], t_pbc const*, t_graph const*, float, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 57096 57096 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] urey_bradley_noener_simd(int, int const*, t_iparams const*, float const (*) [3], float (*) [4], t_pbc const*, t_graph const*, float, t_mdatoms const*, t_fcdata*, int*) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 2 0 57096 57096 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __close_nocancel [{} {0}]" 1 0 29993 29993 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __close_nocancel [{} {0}]" 1 0 29993 29993 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __GI___openat [{} {0}]" 3 0 90090 90090 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] __GI___openat [{} {0}]" 3 0 90090 90090 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] update_realloc(gmx_update_t*, int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30006 30006 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] update_realloc(gmx_update_t*, int) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 30006 30006 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] free [{/home/sagard/tau-2.28.2/src/wrappers/memory/memory_wrapper_dynamic.c} {88}]" 1 0 28133 28133 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] free [{/home/sagard/tau-2.28.2/src/wrappers/memory/memory_wrapper_dynamic.c} {88}]" 1 0 28133 28133 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] calc_x_times_f(int, float const (*) [3], float const (*) [3], bool, float const (*) [3], float (*) [3]) [{calcvir.cpp} {0}]" 1 0 30001 30001 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] calc_x_times_f(int, float const (*) [3], float const (*) [3], bool, float const (*) [3], float (*) [3]) [{calcvir.cpp} {0}]" 1 0 30001 30001 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] gmx_mtop_atomloop_all_next(gmx_mtop_atomloop_all*, int*, t_atom const**) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29998 29998 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] gmx_mtop_atomloop_all_next(gmx_mtop_atomloop_all*, int*, t_atom const**) [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/GROMACS/2019.3-foss-2018b/bin/gmx_mpi} {0}]" 1 0 29998 29998 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] fill_cell(nbnxn_search*, nbnxn_grid_t*, nbnxn_atomdata_t*, int, int, int const*, gmx::ArrayRef<gmx::BasicVector<float> const>, nbnxn_bb_t*) [clone .isra.45] [{nbnxn_grid.cpp} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] fill_cell(nbnxn_search*, nbnxn_grid_t*, nbnxn_atomdata_t*, int, int, int const*, gmx::ArrayRef<gmx::BasicVector<float> const>, nbnxn_bb_t*) [clone .isra.45] [{nbnxn_grid.cpp} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] free_wrapper [{/home/sagard/tau-2.28.2/src/wrappers/memory/memory_wrapper.c} {344}]" 1 0 29804 29804 0 GROUP="TAU_SAMPLE" 
+".TAU application  => [CONTEXT] .TAU application  => [SAMPLE] free_wrapper [{/home/sagard/tau-2.28.2/src/wrappers/memory/memory_wrapper.c} {344}]" 1 0 29804 29804 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Bcast()  " 66 0 0 2005904 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()  " 66 0 0 2005904 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"[SAMPLE] ompi_coll_libnbc_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_coll_libnbc.so} {0}]  " 126 0 3716425 3716425 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] ompi_coll_libnbc_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_coll_libnbc.so} {0}]" 2 0 60001 60001 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __GI___pthread_mutex_lock [{} {0}]  " 553 0 16422461 16422461 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] __GI___pthread_mutex_lock [{} {0}]" 6 0 180002 180002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] UNRESOLVED /usr/lib64/libmlx5.so.1.0.0  " 578 0 17165571 17165571 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] UNRESOLVED /usr/lib64/libmlx5.so.1.0.0" 15 0 448475 448475 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] poll_device [{btl_openib_component.c} {0}]  " 222 0 6618012 6618012 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] poll_device [{btl_openib_component.c} {0}]" 3 0 86902 86902 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] btl_openib_component_progress [{btl_openib_component.c} {0}]  " 220 0 6503249 6503249 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] btl_openib_component_progress [{btl_openib_component.c} {0}]" 3 0 90000 90000 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]  " 719 0 21341657 21341657 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 11 0 330904 330904 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] opal_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1} {0}]  " 159 0 4744507 4744507 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] opal_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1} {0}]" 4 0 119997 119997 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] __GI___pthread_mutex_unlock [{} {0}]  " 583 0 17465350 17465350 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 2 0 89998 89998 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] pthread_spin_lock [{/usr/lib64/libpthread-2.17.so} {0}]  " 624 0 18568495 18568495 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] pthread_spin_lock [{/usr/lib64/libpthread-2.17.so} {0}]" 19 0 569626 569626 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] opal_timer_linux_get_cycles_sys_timer [{timer_linux_component.c} {0}]  " 56 0 1648541 1648541 0 GROUP="TAU_SAMPLE" 
+"MPI_Bcast()   => [CONTEXT] MPI_Bcast()   => [SAMPLE] opal_timer_linux_get_cycles_sys_timer [{timer_linux_component.c} {0}]" 1 0 29999 29999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Comm_split()  " 1 0 0 30003 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Comm_split()   => [CONTEXT] MPI_Comm_split()  " 1 0 0 30003 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Comm_split()   => [CONTEXT] MPI_Comm_split()   => [SAMPLE] __GI___pthread_mutex_lock [{} {0}]" 1 0 30003 30003 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Allreduce()  " 154 0 0 4583057 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()  " 154 0 0 4583057 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 28 0 830631 830631 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] __GI___pthread_mutex_lock [{} {0}]" 21 0 622521 622521 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] ompi_coll_libnbc_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_coll_libnbc.so} {0}]" 5 0 149360 149360 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] UNRESOLVED /usr/lib64/libmlx5.so.1.0.0" 27 0 796412 796412 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] poll_device [{btl_openib_component.c} {0}]" 10 0 296843 296843 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] btl_openib_component_progress [{btl_openib_component.c} {0}]" 9 0 255301 255301 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 23 0 682267 682267 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] opal_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1} {0}]" 4 0 120231 120231 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] pthread_spin_lock [{/usr/lib64/libpthread-2.17.so} {0}]" 26 0 799500 799500 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Allreduce()   => [CONTEXT] MPI_Allreduce()   => [SAMPLE] opal_timer_linux_get_cycles_sys_timer [{timer_linux_component.c} {0}]" 1 0 29991 29991 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Scatter()  " 6 0 0 179995 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Scatter()   => [CONTEXT] MPI_Scatter()  " 6 0 0 179995 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Scatter()   => [CONTEXT] MPI_Scatter()   => [SAMPLE] poll_device [{btl_openib_component.c} {0}]" 2 0 59999 59999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatter()   => [CONTEXT] MPI_Scatter()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 1 0 29998 29998 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatter()   => [CONTEXT] MPI_Scatter()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 1 0 30000 30000 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatter()   => [CONTEXT] MPI_Scatter()   => [SAMPLE] pthread_spin_lock [{/usr/lib64/libpthread-2.17.so} {0}]" 1 0 29999 29999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatter()   => [CONTEXT] MPI_Scatter()   => [SAMPLE] UNRESOLVED /usr/lib64/libmlx5.so.1.0.0" 1 0 29999 29999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Scatterv()  " 5 0 0 150716 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Scatterv()   => [CONTEXT] MPI_Scatterv()  " 5 0 0 150716 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Scatterv()   => [CONTEXT] MPI_Scatterv()   => [SAMPLE] ompi_coll_libnbc_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_coll_libnbc.so} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatterv()   => [CONTEXT] MPI_Scatterv()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] UNRESOLVED /usr/lib64/libc-2.17.so  " 18 0 519185 519185 0 GROUP="TAU_SAMPLE" 
+"MPI_Scatterv()   => [CONTEXT] MPI_Scatterv()   => [SAMPLE] UNRESOLVED /usr/lib64/libc-2.17.so" 1 0 30711 30711 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatterv()   => [CONTEXT] MPI_Scatterv()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Scatterv()   => [CONTEXT] MPI_Scatterv()   => [SAMPLE] __GI___pthread_mutex_lock [{} {0}]" 1 0 29999 29999 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Sendrecv()  " 3315 0 0 98651422 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()  " 3315 0 0 98651422 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] btl_openib_component_progress [{btl_openib_component.c} {0}]" 193 0 5720163 5720163 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 611 0 18163189 18163189 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] __GI___pthread_mutex_lock [{} {0}]" 477 0 14181014 14181014 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] opal_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1} {0}]" 138 0 4121357 4121357 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] ompi_coll_libnbc_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_coll_libnbc.so} {0}]" 109 0 3223847 3223847 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] poll_device [{btl_openib_component.c} {0}]" 180 0 5382692 5382692 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 506 0 15113279 15113279 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] UNRESOLVED /usr/lib64/libmlx5.so.1.0.0" 485 0 14418782 14418782 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] UNRESOLVED /nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_btl_openib.so  " 3 0 90000 90000 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] UNRESOLVED /nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_btl_openib.so" 3 0 90000 90000 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] Tau_lite_stop_timer [{/home/sagard/tau-2.28.2/src/Profile/TauCAPI.cpp} {785}]  " 1 0 29998 29998 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] Tau_lite_stop_timer [{/home/sagard/tau-2.28.2/src/Profile/TauCAPI.cpp} {785}]" 1 0 29998 29998 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] UNRESOLVED /usr/lib64/libc-2.17.so" 15 0 428469 428469 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] Tau_trace_recvmsg [{/home/sagard/tau-2.28.2/src/Profile/TauCAPI.cpp} {1607}]  " 1 0 27648 27648 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] Tau_trace_recvmsg [{/home/sagard/tau-2.28.2/src/Profile/TauCAPI.cpp} {1607}]" 1 0 27648 27648 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] MPI_Sendrecv [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libmpi.so.40.10.1} {0}]  " 1 0 29998 29998 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] MPI_Sendrecv [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libmpi.so.40.10.1} {0}]" 1 0 29998 29998 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] opal_timer_linux_get_cycles_sys_timer [{timer_linux_component.c} {0}]" 48 0 1409726 1409726 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] pthread_spin_lock [{/usr/lib64/libpthread-2.17.so} {0}]" 513 0 15306126 15306126 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] pthread_spin_init [{/usr/lib64/libpthread-2.17.so} {0}]  " 22 0 628658 628658 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] pthread_spin_init [{/usr/lib64/libpthread-2.17.so} {0}]" 19 0 555290 555290 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] MPI_Get_count [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libmpi.so.40.10.1} {0}]  " 1 0 29998 29998 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] MPI_Get_count [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libmpi.so.40.10.1} {0}]" 1 0 29998 29998 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[SAMPLE] UNRESOLVED /nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1  " 15 0 449846 449846 0 GROUP="TAU_SAMPLE" 
+"MPI_Sendrecv()   => [CONTEXT] MPI_Sendrecv()   => [SAMPLE] UNRESOLVED /nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1" 14 0 419846 419846 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Waitall()  " 352 0 0 10308509 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()  " 352 0 0 10308509 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 65 0 1896940 1896940 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] __GI___pthread_mutex_lock [{} {0}]" 47 0 1378922 1378922 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] ompi_coll_libnbc_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/openmpi/mca_coll_libnbc.so} {0}]" 9 0 253215 253215 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 49 0 1489804 1489804 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] UNRESOLVED /usr/lib64/libmlx5.so.1.0.0" 50 0 1471903 1471903 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] poll_device [{btl_openib_component.c} {0}]" 27 0 791576 791576 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] opal_progress [{/nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1} {0}]" 13 0 382922 382922 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] btl_openib_component_progress [{btl_openib_component.c} {0}]" 15 0 437785 437785 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] UNRESOLVED /usr/lib64/libc-2.17.so" 2 0 60005 60005 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] opal_timer_linux_get_cycles_sys_timer [{timer_linux_component.c} {0}]" 6 0 178825 178825 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] pthread_spin_lock [{/usr/lib64/libpthread-2.17.so} {0}]" 65 0 1863244 1863244 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] pthread_spin_init [{/usr/lib64/libpthread-2.17.so} {0}]" 3 0 73368 73368 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Waitall()   => [CONTEXT] MPI_Waitall()   => [SAMPLE] UNRESOLVED /nfs/admin/hpc/arch/AVX2/RedHatEnterpriseServer7/EB_production/2019/software/OpenMPI/3.1.1-GCC-7.3.0-2.30/lib/libopen-pal.so.40.10.1" 1 0 30000 30000 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"[CONTEXT] MPI_Gatherv()  " 3 0 0 89993 0 GROUP="TAU_SAMPLE_CONTEXT" 
+"MPI_Gatherv()   => [CONTEXT] MPI_Gatherv()  " 3 0 0 89993 0 GROUP="TAU_SAMPLE_CONTEXT|TAU_CALLPATH" 
+"MPI_Gatherv()   => [CONTEXT] MPI_Gatherv()   => [SAMPLE] mca_btl_vader_component_progress [{btl_vader_component.c} {0}]" 2 0 59991 59991 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+"MPI_Gatherv()   => [CONTEXT] MPI_Gatherv()   => [SAMPLE] __GI___pthread_mutex_unlock [{} {0}]" 1 0 30002 30002 0 GROUP="TAU_SAMPLE|TAU_CALLPATH" 
+0 aggregates
+102 userevents
+# eventname numevents max min mean sumsqr
+"Heap Memory Used (KB) at Entry" 12423 226690.646484375 213.46875 190892.1781768664 513748730896570.1
+"Heap Memory Used (KB) at Entry : .TAU application" 1 213.46875 213.46875 213.46875 45568.9072265625
+"Heap Memory Used (KB) at Entry : MPI_Finalized()" 1 327.046875 327.046875 327.046875 106959.6584472656
+"Heap Memory Used (KB) at Exit" 12423 226690.646484375 327.0625 190904.6792971265 513763521992035.7
+"Heap Memory Used (KB) at Exit : MPI_Finalized()" 1 327.0625 327.0625 327.0625 106969.87890625
+"Increase in Heap Memory (KB)" 26 155441.0234375 0.015625 7142.725022536058 25072109946.5812
+"Increase in Heap Memory (KB) : MPI_Finalized()" 1 0.015625 0.015625 0.015625 0.000244140625
+"Heap Memory Used (KB) at Entry : MPI_Init_thread()  " 1 438.484375 438.484375 438.484375 192268.5471191406
+"Heap Allocate" 69244 16777216 1 9896.603026977067 2448442383550160
+"Heap Allocate : MPI_Init_thread()  " 29860 4194304 1 1111.381078365707 56512724473015
+"Heap Memory Used (KB)" 122941 228698.322265625 0.0390625 59252.26301883691 1079866460351311
+"Heap Free" 51369 10601784 1 10168.7349958146 1441073425336688
+"Heap Free : MPI_Init_thread()  " 15745 65544 1 118.3832327723087 21579320248
+"Heap Memory Used (KB) at Exit : MPI_Init_thread()  " 1 30607.9189453125 30607.9189453125 30607.9189453125 936844702.1628199
+"Increase in Heap Memory (KB) : MPI_Init_thread()  " 1 30169.4345703125 30169.4345703125 30169.4345703125 910194782.292367
+"Heap Memory Used (KB) at Entry : MPI_Comm_size()  " 7 75361.1435546875 30607.9189453125 49807.32142857143 20792737358.20317
+"Heap Memory Used (KB) at Exit : MPI_Comm_size()  " 7 75361.1435546875 30607.9189453125 49807.32142857143 20792737358.20317
+"Heap Memory Used (KB) at Entry : MPI_Bcast()  " 2318 224731.162109375 30607.9189453125 48393.38544770209 7347719875470.79
+"Heap Allocate : MPI_Bcast()  " 13 57528 32 5168.923076923077 3343511312
+"Message size for broadcast" 2318 409600 0 8858.003882657464 1466744347103
+"Heap Memory Used (KB) at Exit : MPI_Bcast()  " 2318 224731.162109375 30608.2587890625 48393.41375706091 7347745938252.633
+"Increase in Heap Memory (KB) : MPI_Bcast()  " 8 56.1796875 0.14453125 8.20263671875 3188.829849243164
+"Heap Memory Used (KB) at Entry : MPI_Comm_rank()  " 8 75356.67578125 30608.2587890625 46385.56494140625 20561493504.46447
+"Heap Memory Used (KB) at Exit : MPI_Comm_rank()  " 8 75356.67578125 30608.2587890625 46385.56494140625 20561493504.46447
+"Heap Allocate : .TAU application" 38576 16777216 1 16884.63407299876 2391915151405346
+"Heap Free : .TAU application" 16637 10601784 1 29374.56410410531 1384555866211481
+"Heap Memory Used (KB) at Entry : MPI_Get_processor_name()  " 2 75351.2138671875 30653.6767578125 53002.4453125 6617453330.031084
+"Heap Memory Used (KB) at Exit : MPI_Get_processor_name()  " 2 75351.2138671875 30653.6767578125 53002.4453125 6617453330.031084
+"Heap Memory Used (KB) at Entry : MPI_Comm_split()  " 4 75356.67578125 30653.6767578125 64176.80224609375 17973047770.34208
+"Heap Allocate : MPI_Comm_split()  " 307 1920 1 119.1270358306189 21683668
+"Heap Free : MPI_Comm_split()  " 132 408 4 72.63636363636364 1534760
+"Heap Memory Used (KB) at Exit : MPI_Comm_split()  " 4 75361.1435546875 30664.451171875 64183.34375 17976028056.53551
+"Increase in Heap Memory (KB) : MPI_Comm_split()  " 4 10.7744140625 4.4677734375 6.54150390625 195.7140083312988
+"Heap Memory Used (KB) at Entry : MPI_Allreduce()  " 270 226690.474609375 33006.5 219798.0293221933 13227258946876.27
+"Heap Allocate : MPI_Allreduce()  " 272 1184 1 1117.768382352941 357095361
+"Heap Free : MPI_Allreduce()  " 270 1184 1 1124.803703703704 357038913
+"Message size for all-reduce" 270 1184 1 1124.803703703704 357038913
+"Heap Memory Used (KB) at Exit : MPI_Allreduce()  " 270 226690.474609375 33006.5 219798.0305374711 13227258996326.09
+"Heap Memory Used (KB) at Entry : MPI_Comm_free()  " 3 207021.3291015625 75356.62109375 119246.3645833333 54215753003.51467
+"Heap Free : MPI_Comm_free()  " 95 1024 6 177.3157894736842 8988531
+"Heap Memory Used (KB) at Exit : MPI_Comm_free()  " 3 207014.892578125 75351.1298828125 119240.8811848958 54211578866.41611
+"Decrease in Heap Memory (KB)" 1277 30174.1396484375 0.171875 23.81318214075959 910478833.1823158
+"Decrease in Heap Memory (KB) : MPI_Comm_free()  " 3 6.4365234375 4.5224609375 5.4833984375 92.03488445281982
+"Heap Memory Used (KB) at Entry : MPI_Gather()  " 41 224674.982421875 75351.3955078125 220490.0554735137 2015100140163.923
+"Heap Allocate : MPI_Gather()  " 4 168 148 158 100256
+"Heap Memory Used (KB) at Exit : MPI_Gather()  " 41 224674.982421875 75351.7041015625 220490.0705268674 2015100315481.343
+"Increase in Heap Memory (KB) : MPI_Gather()  " 2 0.30859375 0.30859375 0.30859375 0.190460205078125
+"Heap Memory Used (KB) at Entry : MPI_Barrier()  " 2 185828.6318359375 75351.9501953125 130590.291015625 40210196808.25326
+"Heap Memory Used (KB) at Exit : MPI_Barrier()  " 2 185828.6318359375 75351.9501953125 130590.291015625 40210196808.25326
+"Increase in Heap Memory (KB) : MPI_Allreduce()  " 1 0.328125 0.328125 0.328125 0.107666015625
+"Heap Memory Used (KB) at Entry : MPI_Scan()  " 1 75352.2783203125 75352.2783203125 75352.2783203125 5677965848.061837
+"Heap Allocate : MPI_Scan()  " 1 4 4 4 16
+"Heap Free : MPI_Scan()  " 1 4 4 4 16
+"Message size for scan" 1 4 4 4 16
+"Heap Memory Used (KB) at Exit : MPI_Scan()  " 1 75352.2783203125 75352.2783203125 75352.2783203125 5677965848.061837
+"Heap Memory Used (KB) at Entry : MPI_Scatter()  " 2 224674.982421875 94010.572265625 159342.77734375 59316835423.98013
+"Heap Allocate : MPI_Scatter()  " 1 148 148 148 21904
+"Message size for scatter" 2 8 8 8 128
+"Heap Memory Used (KB) at Exit : MPI_Scatter()  " 2 224674.982421875 94010.716796875 159342.849609375 59316862598.93207
+"Increase in Heap Memory (KB) : MPI_Scatter()  " 1 0.14453125 0.14453125 0.14453125 0.0208892822265625
+"Heap Memory Used (KB) at Entry : MPI_Scatterv()  " 6 224731.162109375 95594.294921875 162870.259765625 182151348528.3556
+"Heap Memory Used (KB) at Exit : MPI_Scatterv()  " 6 224731.162109375 95594.294921875 162870.259765625 182151348528.3556
+"Heap Memory Used (KB) at Entry : MPI_Sendrecv()  " 3362 226690.474609375 131613.029296875 224119.8221099327 168958404068445.5
+"Message size sent to all nodes" 5914 602916 8 267420.8846804193 866392072337056
+"Heap Allocate : MPI_Sendrecv()  " 6 1040 24 336 1451904
+"Message size sent to node 14" 3004 602916 8 273931.7882822903 463178405117200
+"Message size sent to node 14 : MPI_Sendrecv()  " 1728 602916 8 450734.1921296296 461654280179536
+"Message size received from all nodes" 5924 695412 8 266966.4058068873 866676819175824
+"Heap Memory Used (KB) at Exit : MPI_Sendrecv()  " 3362 226690.474609375 131613.177734375 224119.8226955216 168958404921662.5
+"Increase in Heap Memory (KB) : MPI_Sendrecv()  " 4 1.28125 0.0234375 0.4921875 1.9300537109375
+"Message size sent to node 0" 2910 571596 8 260699.6632302405 403213667219856
+"Message size sent to node 0 : MPI_Sendrecv()  " 1634 571596 8 439245.9167686658 401900776357392
+"Heap Memory Used (KB) at Entry : MPI_Irecv()  " 2552 226690.560546875 208701.744140625 224330.5547150519 128442195518740.5
+"Heap Memory Used (KB) at Exit : MPI_Irecv()  " 2552 226690.560546875 208701.744140625 224330.5547150519 128442195518740.5
+"Heap Memory Used (KB) at Entry : MPI_Isend()  " 2552 226690.646484375 208701.916015625 224330.683602934 128442343094699
+"Message size sent to node 0 : MPI_Isend()  " 1276 34656 27888 32059.71159874608 1312890862464
+"Heap Memory Used (KB) at Exit : MPI_Isend()  " 2552 226690.646484375 208701.916015625 224330.683602934 128442343094699
+"Message size sent to node 14 : MPI_Isend()  " 1276 37488 26808 34500.3197492163 1524124937664
+"Heap Memory Used (KB) at Entry : MPI_Waitall()  " 1276 226690.646484375 208701.916015625 224330.683602934 64221171547350.1
+"Heap Allocate : MPI_Waitall()  " 3 2064 2064 2064 12780288
+"Message size received in wait" 2552 39264 18672 33289.4670846395 2843958359808
+"Message size received in wait : MPI_Waitall()  " 2552 39264 18672 33289.4670846395 2843958359808
+"Heap Free : MPI_Waitall()  " 5104 96 40 44.00940438871474 9969920
+"Heap Memory Used (KB) at Exit : MPI_Waitall()  " 1276 226690.474609375 208703.759765625 224330.5164301283 64221075700373.26
+"Increase in Heap Memory (KB) : MPI_Waitall()  " 3 1.84375 1.84375 1.84375 10.1982421875
+"Decrease in Heap Memory (KB) : MPI_Waitall()  " 1273 0.21875 0.171875 0.1719118224666143 37.6240234375
+"Heap Memory Used (KB) at Entry : MPI_Recv()  " 10 224674.982421875 220830.716796875 223836.791796875 501051704868.4768
+"Heap Memory Used (KB) at Exit : MPI_Recv()  " 10 224674.982421875 220830.716796875 223836.791796875 501051704868.4768
+"Heap Memory Used (KB) at Entry : MPI_Gatherv()  " 3 224674.982421875 224674.982421875 224674.982421875 151436543178.8095
+"Heap Memory Used (KB) at Exit : MPI_Gatherv()  " 3 224674.982421875 224674.982421875 224674.982421875 151436543178.8095
+"Heap Memory Used (KB) at Entry : MPI_Finalize()  " 1 185828.6318359375 185828.6318359375 185828.6318359375 34532280410.0164
+"Heap Allocate : MPI_Finalize()  " 201 32816 7 1672.159203980099 10771027090
+"Heap Free : MPI_Finalize()  " 13385 4194304 1 2333.539260366082 56495602272819
+"Heap Memory Used (KB) at Exit : MPI_Finalize()  " 1 155654.4921875 155654.4921875 155654.4921875 24228320938.1485
+"Decrease in Heap Memory (KB) : MPI_Finalize()  " 1 30174.1396484375 30174.1396484375 30174.1396484375 910478703.5234079
+"Heap Memory Used (KB) at Exit : .TAU application" 1 155654.4921875 155654.4921875 155654.4921875 24228320938.1485
+"Increase in Heap Memory (KB) : .TAU application" 1 155441.0234375 155441.0234375 155441.0234375 24161911767.29742
+"MEMORY LEAK! Heap Allocate : MPI_Init_thread()  " 996 65536 1 506.5913654618474 9678439327
+"MEMORY LEAK! Heap Allocate : MPI_Finalize()  " 16 744 64 259 1966848
+"MEMORY LEAK! Heap Allocate : .TAU application" 9042 16777216 3 17873.4701393497 1011732630158121
+"MEMORY LEAK! Heap Allocate : MPI_Comm_split()  " 10 88 6 51.2 40400
+"MEMORY LEAK! Heap Allocate : MPI_Sendrecv()  " 3 128 24 58.66666666666666 17536
