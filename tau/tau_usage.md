@@ -1,4 +1,4 @@
-## Introdution to TAU 
+## Introdution to Performance Analysis with TAU 
 
 TAU (Tuning and Analysis Utility) is profiling tool for performance analysis of programs written in C, C++, Java and Python couple with MPI and OpenMP. TAU maintains performance data of each thread, context and node in use by an application. TAU supports dynamic instrumentation (automatic ), source code and compiler instrumentation (manual )based on PDT (Program DataBase Toolkit). 
 
@@ -116,6 +116,7 @@ MPI calls are profiled by default. For OpenMP profiling calls we need to add -om
 
 4. Context event winwdow in case of profiling with -memory option 
 
+![Visualising Profiling Data](../images/tau/context_window_memory.png)
 
 
 ###### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
