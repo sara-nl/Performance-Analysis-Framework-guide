@@ -6,6 +6,10 @@ TAU's visualization tool, paraprof, provides graphical displays of all the perfo
 
 Reference : <https://www.cs.uoregon.edu/research/tau/tau-referenceguide.pdf>
 
+The sample dataset is available : 
+
+<https://github.com/sara-nl/Performance-Analysis-Framework-guide/tree/master/sample_dataset/tau_data>
+
 ### Compilation
 
 TAU compilation is a different process for each kind of profiling and it also depends on application to profile. Below are some example as a guide for compilation process. For more details please  
