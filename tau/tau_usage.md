@@ -18,14 +18,17 @@ TAU compilation is a different process for each kind of profiling and it also de
 
 ##### Software Environment (Basic)
 
+This is one set of programming. We can also use Intel Toolchain for this activity. 
+
 1. MPI : **OpenMPI/3.1.1-GCC-7.3.0-2.30**
 2. PAPI (Performance API) : **PAPI/5.7.0-GCCcore-7.3.0**
 3. PDT (Program DataBase Toolkit) : **PDT/3.25-foss-2018b**
 4. CMake (>= 3.12) : **CMake/3.12.1-GCCcore-7.3.0**
+5. CUDA (for profiling with CUPTI)
 
 *Diagram to come here to explain TAU working*
 
-##### Preparing TAU compilation for MPI + OpenMP analysis
+#### Preparing TAU compilation for MPI + OpenMP analysis
 
 `./configure -prefix=/home/<path to>/tau-2.28.2/build -mpi -ompt=download -papi=$EBROOTPAPI -pdt=$EBROOTPDT`
 
@@ -33,9 +36,35 @@ TAU compilation is a different process for each kind of profiling and it also de
 
 [![asciicast](https://asciinema.org/a/1peXkVDvSfPjI0HvFjFENSMiW.svg)](https://asciinema.org/a/1peXkVDvSfPjI0HvFjFENSMiW)
  
-##### Preparing TAU compilation for MPI + OpenMP + CUDA analysis
+#### Preparing TAU compilation for MPI + OpenMP + CUDA analysis
 
-##### Preparing TAU compilation for MPI + OpenMP + CUDA + Python analysis 
+`./configure -prefix=/home/sagard/tau-2.28.2/build -mpi -ompt=download -papi=$EBROOTPAPI -pdt=$EBROOTPDT -cuda=$EBROOTCUDA` will likely result in an error like this : 
+
+```
+In file included from /home/sagard/tau-2.28.2/include/Profile/CuptiActivity.h:20:0,
+                 from CuptiActivity.cpp:1:
+/sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/binutils/2.30-GCCcore-7.3.0/include/bfd.h:35:2: error: #error config.h must be included before this header
+ #error config.h must be included before this header
+```
+We will have to edit the source to compile the code. Open the file `tau-2.28.2/include/Profile/CuptiActivity.h` and edit the file by adding the following two lines 
+
+```
+#define PACKAGE 1
+#define PACKAGE_VERSION 1
+```
+after the `#define statement`
+
+Finally delete the build folder, configure and compile again. It should show the following output : 
+
+```
+Built /home/sagard/tau-2.28.2/build/x86_64/lib/Makefile.tau-papi-ompt-tr4-mpi-cupti-pdt-openmp
+```
+
+The full length procedure is shown in the following shell script video. 
+
+[![asciicast](https://asciinema.org/a/P9pqT3IDZJTPMTaGgIRb8aqBO.svg)](https://asciinema.org/a/P9pqT3IDZJTPMTaGgIRb8aqBO)
+
+#### Preparing TAU compilation for MPI + OpenMP + CUDA + Python analysis 
 
 
 ---
