@@ -58,7 +58,7 @@ Instructions : <https://www.cs.uoregon.edu/research/tau/downloads.php>
 
 ---
 
-##### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
+#### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
 
 The sample script for profiling gromacs : 
 
@@ -122,7 +122,7 @@ MPI calls are profiled by default. For OpenMP profiling calls we need to add -om
 ![Visualising Profiling Data](../images/tau/context_window_memory.png)
 
 
-##### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
+#### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
 
 1. GPU Profile 
 
@@ -141,7 +141,7 @@ MPI calls are profiled by default. For OpenMP profiling calls we need to add -om
 ![GPU Profile](../images/tau/context_event_wondow_gpu.png)
 
 
-##### Benchmark application for MPI + OpenMP + CUDA + Python : Tensorflow with Horovod + MPI with CUDA support 
+#### Benchmark application for MPI + OpenMP + CUDA + Python : Tensorflow with Horovod + MPI with CUDA support 
 
 Coming soon !!!
 
