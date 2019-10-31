@@ -37,6 +37,9 @@ TAU compilation is a different process for each kind of profiling and it also de
 
 ##### Preparing TAU compilation for MPI + OpenMP + CUDA + Python analysis 
 
+
+---
+
 ### Benchmark Applications
 
 #### Install paraprof on your laptop 
@@ -55,7 +58,7 @@ Instructions : <https://www.cs.uoregon.edu/research/tau/downloads.php>
 
 ---
 
-###### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
+##### Benchmark application for MPI + OpenMP : Gromacs (CPU only)
 
 The sample script for profiling gromacs : 
 
@@ -119,8 +122,28 @@ MPI calls are profiled by default. For OpenMP profiling calls we need to add -om
 ![Visualising Profiling Data](../images/tau/context_window_memory.png)
 
 
-###### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
-###### Benchmark application for MPI + OpenMP + CUDA + Python : Tensorflow with Horovod + MPI with CUDA support 
+##### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
+
+1. GPU Profile 
+
+![GPU Profile](../images/tau/GPU_profile.png)
+
+2. STacked GPU Profiles 
+
+![GPU Profile](../images/tau/stacked_profile_gpu.png)
+
+3. User Event Window for GPU 
+
+![GPU Profile](../images/tau/user_event_window_gpu.png)
+
+4. Context event window for GPU 
+
+![GPU Profile](../images/tau/context_event_wondow_gpu.png)
+
+
+##### Benchmark application for MPI + OpenMP + CUDA + Python : Tensorflow with Horovod + MPI with CUDA support 
+
+Coming soon !!!
 
 
 
