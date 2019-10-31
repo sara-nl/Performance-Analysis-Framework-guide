@@ -157,6 +157,41 @@ MPI calls are profiled by default. For OpenMP profiling calls we need to add -om
 
 #### Benchmark application for MPI + OpenMP + CUDA : Gromacs (CPU + GPU)
 
+Job script for profiling MPI + OpenMP + CUDA applications 
+
+```#!/bin/bash
+
+#BATCH --job-name="benchmarking_gromacs"
+#SBATCH --time=00:30:00
+#SBATCH -N 1
+#SBATCH -p gpu_short
+
+module purge
+module load 2019
+module load GROMACS/2019.3-foss-2018b-CUDA-10.0.130
+#module load CUDA/10.1.243
+module load PAPI/5.7.0-GCCcore-7.3.0
+module load PDT/3.25-foss-2018b
+module load CMake/3.12.1-GCCcore-7.3.0
+
+#set TAU environment
+export TAU_HOME=/home/sagard/tau-2.28.2/build/x86_64
+#export TAU_MAKEFILE=/home/sagard/tau-2.28.2/build/x86_64/lib/Makefile.tau-papi-ompt-tr4-mpi-pdt-openmp
+export TAU_MAKEFILE=/home/sagard/tau-2.28.2/build/x86_64/lib/Makefile.tau-papi-ompt-tr4-mpi-cupti-pdt-openmp
+export PATH=$TAU_HOME/bin:$PATH
+#export LD_LIBRARY_PATH=/home/sagard/tau-2.28.2/build/x86_64/lib:$LD_LIBRARY_PATH
+
+export TAU_COMM_MATRIX=1
+export OMP_NUM_THREADS=8
+export TAU_THROTTLE=1
+export TAU_THROTTLE_NUMCALLS=3000
+export TAU_THROTTLE_PERCALL=5000
+export TAU_VERBOSE=1
+
+mpirun -map-by ppr:2:node -np 2 -x OMP_NUM_THREADS tau_exec -T cupti -cupti gmx_mpi  mdrun -s lignocellulose-rf.tpr -maxh 0.02 -resethway -noconfout -nsteps 50000 -g logfile
+
+```
+
 1. GPU Profile 
 
 ![GPU Profile](../images/tau/GPU_profile.png)
