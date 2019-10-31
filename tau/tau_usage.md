@@ -10,6 +10,11 @@ The sample dataset is available :
 
 <https://github.com/sara-nl/Performance-Analysis-Framework-guide/tree/master/sample_dataset/tau_data>
 
+The document is mainly divided into two parts : 
+
+1. [Compilation](###Compilation)
+2. [Analysis using ParaProf](###Using ParaProf for Applications)
+
 ### Compilation
 
 TAU compilation is a different process for each kind of profiling and it also depends on application to profile. Below are some example as a guide for compilation process. For more details please  
@@ -73,7 +78,7 @@ The full length procedure is shown in the following shell script video.
 
 ---
 
-### Benchmark Applications
+### Using ParaProf for Applications
 
 #### Install paraprof on your laptop 
 
