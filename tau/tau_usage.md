@@ -33,7 +33,8 @@ This is one set of programming. We can also use Intel Toolchain for this activit
 2. PAPI (Performance API) : **PAPI/5.7.0-GCCcore-7.3.0**
 3. PDT (Program DataBase Toolkit) : **PDT/3.25-foss-2018b**
 4. CMake (>= 3.12) : **CMake/3.12.1-GCCcore-7.3.0**
-5. CUDA (for profiling with CUPTI)
+5. CUDA ( Optionalfor profiling with CUPTI)
+6. Python (Optional for Profiling python functions)
 
 *Diagram to come here to explain TAU working*
 
@@ -74,6 +75,17 @@ The full length procedure is shown in the following shell script video.
 [![asciicast](https://asciinema.org/a/P9pqT3IDZJTPMTaGgIRb8aqBO.svg)](https://asciinema.org/a/P9pqT3IDZJTPMTaGgIRb8aqBO)
 
 #### Preparing TAU compilation for MPI + OpenMP + CUDA + Python analysis 
+
+Make sure that, `compilerwrappers` are loaded before you proceed for compiling TAU 
+
+use the below command to compile TAU for MPI + OpenMP + CUDA + Python
+
+`./configure -prefix=/home/sagard/tau-2.28.2/build -mpi -ompt=download -papi=$EBROOTPAPI -pdt=$EBROOTPDT -cuda=$EBROOTCUDA -pythoninc=/sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/Python/3.6.6-foss-2018b/include/python3.6m/ -pythonlib=/sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/Python/3.6.6-foss-2018b/lib -bfd=$EBROOTBINUTIL`
+
+See the below screenshot video for reference. 
+
+[![asciicast](https://asciinema.org/a/Rmsal452zQs69DGvkJhbWPRbA.svg)](https://asciinema.org/a/Rmsal452zQs69DGvkJhbWPRbA)
+
 
 
 ---
