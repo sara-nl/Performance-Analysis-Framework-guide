@@ -86,8 +86,6 @@ See the below screenshot video for reference.
 
 [![asciicast](https://asciinema.org/a/Rmsal452zQs69DGvkJhbWPRbA.svg)](https://asciinema.org/a/Rmsal452zQs69DGvkJhbWPRbA)
 
-
-
 ---
 
 ### Using ParaProf for Applications
