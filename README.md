@@ -1,4 +1,4 @@
-# Performance-Analysis-Framwork-guide
+# Performance-Analysis-Framework-guide
 
 This repository is meant to record intstructions for using several performance analysis tools on Cartesius. The following tools are installed currently in newly build software stack. 
 
