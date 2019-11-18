@@ -3,7 +3,7 @@
 #SBATCH -t 01:00:00
 #SBATCH -p broadwell
 #SBATCH -N 2
-#SBATCH -n 16
+#SBATCH -n 32
 #SBATCH -c 4
 module load 2019
 module load foss/2018b
@@ -17,14 +17,15 @@ export TESTCASE=ion_channel
 export INPUTFILENAME=ion_channel.tpr
 export RESULTDIR=${SLURM_SUBMIT_DIR}/${SLURM_JOB_ID}_gromacs_$TESTCASE_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling
 export WORKDIR=/scratch-shared/${USER}/${SLURM_JOB_ID}
+export SELECTIVERECODINGFILENAME=scorep-selective-recording.configuration
 
 # setup the measurement environment
 export SCOREP_PROFILING=true
-export PAPI_METRICS_1="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
+export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 
 # copy executable and input directory to workdir
 mkdir -p $WORKDIR
-cp ${GROMACSINSTALLDIR}/bin/gmx_mpi ${GROMACSTESTCASEDIR}/${INPUTFILENAME} ${WORKDIR}
+cp ${GROMACSINSTALLDIR}/bin/gmx_mpi ${GROMACSTESTCASEDIR}/${INPUTFILENAME} ${GROMACSTESTCASEDIR}/${SELECTIVERECODINGFILENAME} ${WORKDIR}
 cd $WORKDIR
 
 # print information about the job to stdout
@@ -38,13 +39,15 @@ echo "Running testcase ${TESTCASE} on ${NNODES} nodes / ${NPROC} MPI processes /
 echo "========================================================="
 echo ""
 # run test case
+SCOREP_SELECTIVE_CONFIG_FILE=${SELECTIVERECODINGFILENAME} \
+SCOREP_METRIC_PAPI=${PAPI_METRICS} \
 SCOREP_ENABLE_PROFILING=${SCOREP_PROFILING} \
 SCOREP_EXPERIMENT_DIRECTORY=${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling \
 OMP_NUM_THREADS=$NTHREADS \
 srun -N $NNODES -n $NPROC gmx_mpi mdrun \
     -s ${INPUTFILENAME} -maxh 0.50 -resethway -noconfout -nsteps 10000 \
-    -g ${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}_scorep_profiling.log \
-&> ${SLURM_JOB_ID}_stdouterr_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}_scorep_profiling.log
+    -g ${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling.log \
+&> ${SLURM_JOB_ID}_stdouterr_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling.log
 
 # copy back results to home directory
 mkdir ${RESULTDIR}
