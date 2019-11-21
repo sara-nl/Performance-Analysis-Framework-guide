@@ -94,7 +94,7 @@ cd gromacs_testcase
 wget https://repository.prace-ri.eu/ueabs/GROMACS/1.2/GROMACS_TestCaseA.tar.gz
 tar xzf GROMACS_TestCaseA.tar.gz
 ```
-Download [ion_channel_reference_run_2N.job](batch_scripts/ion_channel_reference_run_2N.job) and run the testcase:
+Download [ion_channel_2N.reference.job](batch_scripts/ion_channel_2N.reference.job) and run the testcase:
 ```
 sbatch ion_channel_reference_run_2N.job
 ```
@@ -147,10 +147,10 @@ make install &> make_install.log
 Run the `ion_channel` test case with the instrumented version of gromacs and profiling enabled.
 Set up the measurement environment in the batch script, e.g. to use PAPI metrics (choose PAPI metrics from the list obtained with `papi_avail` on the corresponding hardware):
 ```
-export SCOREP_PROFILING=true
-export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
+export SCORE_ENABLEP_PROFILING=true
+export SCOREP_METRIC_PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 ```
-Download [ion_channel_scorep_profiling_run_2N.job](batch_scripts/ion_channel_scorep_profiling_run_2N.job) and run the testcase:
+Download [ion_channel_2N.scorep_profiling.job](batch_scripts/ion_channel_2N.scorep_profiling.job) and run the testcase:
 ```
 cd ~/gromacs_testcase
 sbatch ion_channel_scorep_profiling_run_2N.job
@@ -177,12 +177,12 @@ For the profiling run with Score-P, we get:
 Performance:        1.193       20.118
 ```
 
-The overhead of Score-P is very high.
+The overhead of Score-P is very high. This is to be expected as Score-P does instrumentation-based profiling, but we can try to reduce the overhead.
 
 Use `scorep-score` to identify the parts causing the overhead, and to get an estimation of the memory requirements for a tracing run.
 Regions that are visited a lot with a low execution time can induce a large measurement overhead.
 ```
-$ scorep-score 7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/profile.cubex -r
+$ scorep-score 7162687_gromacs_2N_12P_4T_scorep_profiling/7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/profile.cubex -r
 ```
 ```
 Estimated aggregate size of event trace:                   196GB
@@ -211,20 +211,20 @@ flt     type     max_buf[B]        visits  time[s] time[%] time/visit[us]  regio
 It is possible to define filters to include/exclude regions (or files) to try an limit the overhead and the trace size.
 Regions with a lot of visits but a low time percentage are good candidates for exclusion. Another solution is to include only regions with a high time percentage.
 
-Use for example file [scorep-gromacs.filt](scorep-filters/scorep-gromacs.filt), or use the script [write_scorep_filter.py](scorep-filters/write_scorep_filter.py) to filter automatically based on some carefully chosen parameters:
+Use for example file [scorep-gromacs.filt](scorep-filters/scorep-gromacs.filt), or use the scripts [write_scorep_filter_include.py](scorep-filters/write_scorep_filter_include.py) and [write_scorep_filter_exclude.py](scorep-filters/write_scorep_filter_exclude.py) to filter automatically based on some carefully chosen parameters:
 ```
-scorep-score 7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/profile.cubex -r > scorep-score-gromacs.out
-python write_scorep_filter.py scorep-score-gromacs.out 0.1 1000000 1 scorep-gromacs.filt
+scorep-score 7162687_gromacs_2N_12P_4T_scorep_profiling/7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/profile.cubex -r > scorep-score-gromacs.out
+python write_scorep_filter_include.py scorep-score-gromacs.out 0.1 1000000 1 scorep-gromacs.filt 1 1
 ```
 
 Then see the effect of the filter on the size of the output and adjust the filter if needed:
 ```
 $ scorep-score -f scorep-gromacs.filt  7162687_gromacs_2N_12P_4T_scorep_profiling/7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/profile.cubex
 
-Estimated aggregate size of event trace:                   2239MB
-Estimated requirements for largest trace buffer (max_buf): 188MB
-Estimated memory requirements (SCOREP_TOTAL_MEMORY):       196MB
-(hint: When tracing set SCOREP_TOTAL_MEMORY=196MB to avoid intermediate flushes
+Estimated aggregate size of event trace:                   2569MB
+Estimated requirements for largest trace buffer (max_buf): 216MB
+Estimated memory requirements (SCOREP_TOTAL_MEMORY):       224MB
+(hint: When tracing set SCOREP_TOTAL_MEMORY=224MB to avoid intermediate flushes
  or reduce requirements using USR regions filters.)
 
 flt     type     max_buf[B]        visits  time[s] time[%] time/visit[us]  region
@@ -235,17 +235,16 @@ flt     type     max_buf[B]        visits  time[s] time[%] time/visit[us]  regio
  -       COM     27,673,884    12,761,589   441.69     0.5          34.61  COM
  -    SCOREP             96            12     0.09     0.0        7818.95  SCOREP
 
- *       ALL    197,023,475    56,360,342 81629.93    97.7        1448.36  ALL-FLT
- +       FLT 21,675,922,443 8,079,463,090  1950.26     2.3           0.24  FLT
+ *       ALL    226,006,147    69,723,880 81848.58    97.9        1173.90  ALL-FLT
+ +       FLT 21,646,945,907 8,066,099,552  1731.61     2.1           0.21  FLT
  -       OMP    140,107,854    40,240,780  2644.36     3.2          65.71  OMP-FLT
  -       MPI     31,111,579     4,150,042   894.22     1.1         215.47  MPI-FLT
- *       USR     22,240,242    10,317,420 77784.85    93.1        7539.18  USR-FLT
- *       COM      3,579,524     1,652,088   306.41     0.4         185.47  COM-FLT
+ *       COM     27,673,884    12,761,589   441.69     0.5          34.61  COM-FLT
+ *       USR     27,128,554    12,571,457 77868.23    93.2        6194.05  USR-FLT
  -    SCOREP             96            12     0.09     0.0        7818.95  SCOREP-FLT
-
 ```
 
-And finally do the profiling run with Score-P using the filter.
+And finally do the profiling run with Score-P using the filter. (use e.g. [ion_channel_2N.scorep_profiling_filter.job](batch_scripts/ion_channel_2N.scorep_profiling_filter.job)).
 In this case we still have a large overhead, but the size of the trace will be more reasonable.
 
 #### 4 bis: selective recording
@@ -268,16 +267,75 @@ And we set the environment variable `SCOREP_SELECTIVE_CONFIG_FILE=scorep-selecti
   And the selective recording does not seem to work with just this...
 
 
+*TODO:* MAKE IT WORK !!!!
+
 
 #### 5 - Analysis of generated performance data
 On Cartesius, we only managed to build CubeGUI with foss, so please use module `CubeGUI/4.4.3-foss-2018b`.
-Alternatively, build CubeGUI on your local machine (recommended).
+To forward X11 client over ssh and thus allow display, you have to connect to Cartesius using the `-X` flag: `ssh -X <login>@cartesius.surfsara.nl`.
+
+Alternatively, build CubeGUI on your local machine, copy the performance data generated by Score-P to you local machine and open them with cube. This is the recommended workflow.
+
+```
+$ scp -r cartesius:~/gromacs_testcase/7162687_gromacs_2N_12P_4T_scorep_profiling/7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/ .scorep.cfg                                                         100% 1738   135.2KB/s   00:00    
+MANIFEST.md                                                        100%  717    72.9KB/s   00:00    
+profile.cubex                                                      100% 8675KB  89.9MB/s   00:00   
+$ cube 7162687_gromacs_ion_channel_2N_12P_4T_scorep_profiling/profile.cubex &
+```
+
+*TODO:* ADD SCREENSHOTS
+
+
+
 
 #### 6 - Preparation of run with tracing
-define (or adjust) the filter file for a tracing run using scorep-score.
+It is usually necessary to use a filter file for a tracing run in order to keep the size of the recorded trace manageable.
+Then starting from the setup used for profiling, we only need to enable tracing and set the total memory allocated for Score-P:
+```
+SCOREP_ENABLE_TRACING=true
+SCOREP_TOTAL_MEMORY=1GB
+```
+
 
 #### 7 - Run with tracing enabled
-Generate a trace with filter applied
+Then using [ion_channel_2N.scorep_tracing.job](batch_scripts/ion_channel_2N.scorep_tracing.job) with an adequate filter, we run the `ion_channel` testcase again to collect the execution trace.
+On Cartesius Haswell, this takes the same time as a profiling run with Score-P:
+```
+Core t (s)   Wall t (s)        (%)
+Time:    43624.972      908.922     4799.6
+  (ns/day)    (hour/ns)
+Performance:        1.210       19.841
+```
+and generates, in addition to the Score-P profile, a folder `traces` and files `traces.def` and `traces.otf2`.
+Here the `traces` folder has a size of 2.2GB.
+
 
 #### 8 - Analysis of generated trace
-Perform in-depth analysis on the trace data with a trace viewer (Vampir, ViTE, ???
+First perform an automated trace analysis with Scalasca and/or Casita.
+```
+$ module load Scalasca/2.5-foss-2018b
+$ square -s 7213021_gromacs_2N_12P_4T_scorep_tracing/7213021_gromacs_ion_channel_2N_12P_4T_scorep_tracing/
+INFO: Post-processing runtime summarization report (profile.cubex)...
+/sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/Score-P/5.0-foss-2018b/bin/scorep-score -r ././profile.cubex > ././scorep.score
+INFO: Score report written to ././scorep.score
+```
+
+With `square -s`, Scalasca post-processes the output generates
+When provided with a Score-P experiment directory, here `7213021_gromacs_2N_12P_4T_scorep_tracing/7213021_gromacs_ion_channel_2N_12P_4T_scorep_tracing/`, `square` post-processes intermediate analysis reports produced by a measurement and/or an automatic trace analysis to derive additional metrics and construct a hierarchy of measured and derived metrics.
+One can view this final report using the Cube GUI.
+
+When running `square` without the `-s` flag, then Cube-Gui is autonatically started to view the final report once the post-processing is done.
+
+-> either way give the same result.
+*WARNING:* I don't see the critical path analysis, or the late sender/late receiver, etc.
+           Should I run gromacs with scan ? (i.e. directly using Scalasca, rather than with Score-P with a subsequent Scalasca analysis)
+
+
+Alternatively, we can use Casita to perform an automated trace analysis.
+-> IS IT BETTER THAN SCALASCA ? IF NOT, WE DO NOT USE IT.
+
+
+Then perform in-depth analysis on the trace data with a trace viewer (Vampir, ViTE, ???)
+
+
+#### 9 - Automatic calculation of POP-Coe metrics using Cube-4.5 release preview
