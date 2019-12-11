@@ -1,0 +1,328 @@
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Welcome to Extrae 3.6.1
+Extrae: Detected GOMP version is 4.5
+Extrae: Detected and hooked OpenMP runtime: [GNU GOMP]
+Extrae: OMP_NUM_THREADS set to 4
+Extrae: Parsing the configuration file (extrae.xml) begins
+Extrae: Tracing package is located on /sw/arch/RedHatEnterpriseServer7/EB_production/2019/software/Extrae/3.6.1-foss-2018b
+Extrae: Generating intermediate files for Paraver traces.
+Extrae: MPI routines will collect HW counters information.
+Extrae: OpenMP routines will collect HW counters information.
+Extrae: Tracing 3 level(s) of MPI callers: [ 1 2 3 ]
+Extrae: Warning! change-at-time time units not specified. Using seconds
+Extrae: PAPI domain set to ALL for HWC set 1
+Extrae: HWC set 1 contains following counters < PAPI_TOT_INS (0x80000032) PAPI_TOT_CYC (0x8000003b) PAPI_L1_DCM (0x80000000) PAPI_L2_DCM (0x80000002) PAPI_L3_TCM (0x80000008) PAPI_BR_INS (0x80000037) PAPI_BR_MSP (0x8000002e) RESOURCE_STALLS (0x4000002e) > - never changes
+Extrae: Warning! change-at-time time units not specified. Using seconds
+Extrae: PAPI domain set to ALL for HWC set 2
+Extrae: HWC set 2 contains following counters < PAPI_TOT_INS (0x80000032) PAPI_TOT_CYC (0x8000003b) PAPI_VEC_SP (0x80000069) PAPI_SR_INS (0x80000036) PAPI_LD_INS (0x80000035) > - never changes
+Extrae: Error! Hardware counter PAPI_FP_INS (0x80000034) is not available. Check set 2.
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...
+                      :-) GROMACS - gmx mdrun, 2019.3 (-:
+
+                            GROMACS is written by:
+     Emile Apol      Rossen Apostolov      Paul Bauer     Herman J.C. Berendsen
+    Par Bjelkmar      Christian Blau   Viacheslav Bolnykh     Kevin Boyd    
+ Aldert van Buuren   Rudi van Drunen     Anton Feenstra       Alan Gray     
+  Gerrit Groenhof     Anca Hamuraru    Vincent Hindriksen  M. Eric Irrgang  
+  Aleksei Iupinov   Christoph Junghans     Joe Jordan     Dimitrios Karkoulis
+    Peter Kasson        Jiri Kraus      Carsten Kutzner      Per Larsson    
+  Justin A. Lemkul    Viveca Lindahl    Magnus Lundborg     Erik Marklund   
+    Pascal Merz     Pieter Meulenhoff    Teemu Murtola       Szilard Pall   
+    Sander Pronk      Roland Schulz      Michael Shirts    Alexey Shvetsov  
+   Alfons Sijbers     Peter Tieleman      Jon Vincent      Teemu Virolainen 
+ Christian Wennberg    Maarten Wolf   
+                           and the project leaders:
+        Mark Abraham, Berk Hess, Erik Lindahl, and David van der Spoel
+
+Copyright (c) 1991-2000, University of Groningen, The Netherlands.
+Copyright (c) 2001-2018, The GROMACS development team at
+Uppsala University, Stockholm University and
+the Royal Institute of Technology, Sweden.
+check out http://www.gromacs.org for more information.
+
+GROMACS is free software; you can redistribute it and/or modify it
+under the terms of the GNU Lesser General Public License
+as published by the Free Software Foundation; either version 2.1
+of the License, or (at your option) any later version.
+
+GROMACS:      gmx mdrun, version 2019.3
+Executable:   /scratch/shared/maximem/7240432/./gmx_mpi
+Data prefix:  /home/maximem/gromacs-2019.3/install
+Working dir:  /scratch/shared/maximem/7240432
+Command line:
+  gmx_mpi mdrun -s ion_channel.tpr -maxh 0.50 -resethway -noconfout -nsteps 10000 -g 7240432_gromacs_ion_channel_2N_16P_4T_extrae-ldpreload.log
+
+Reading file ion_channel.tpr, VERSION 5.1.4 (single precision)
+Note: file tpx version 103, software tpx version 116
+Overriding nsteps with value passed on the command line: 10000 steps, 25 ps
+Changing nstlist from 10 to 80, rlist from 1 to 1.129
+
+
+Using 16 MPI processes
+Using 4 OpenMP threads per MPI process
+
+starting mdrun 'Protein'
+10000 steps,     25.0 ps.
+
+step 5000: resetting all time and cycle counters
+
+
+Dynamic load balancing report:
+ DLB was off during the run due to low measured imbalance.
+ Average load imbalance: 2.0%.
+ The balanceable part of the MD step is 36%, load imbalance is computed from this.
+ Part of the total run time spent waiting due to load imbalance: 0.7%.
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:     2128.182       33.280     6394.8
+                 (ns/day)    (hour/ns)
+Performance:       32.459        0.739
+
+GROMACS reminds you: "Some of these pro-drug messages come from popular culture." (John Walters)
+
+Extrae: Resource usage is disabled at flush buffer.
+Extrae: Memory usage is disabled at flush buffer.
+Extrae: Tracing buffer can hold 5000000 events
+Extrae: Circular buffer disabled.
+Extrae: Sampling buffers will be written at instrumentation points
+Extrae: Dynamic memory instrumentation is disabled.
+Extrae: Basic I/O memory instrumentation is disabled.
+Extrae: System calls instrumentation is disabled.
+Extrae: Parsing the configuration file (extrae.xml) has ended
+Extrae: Intermediate traces will be stored in /scratch/shared/maximem/7240432
+Extrae: Tracing mode is set to: Detail.
+Extrae: Successfully initiated with 1 tasks and 4 threads
+
+Extrae: Temporal directory (/scratch/shared/maximem/7240432) is shared among processes.
+Extrae: Final directory (/scratch/shared/maximem/7240432) is shared among processes.
+Extrae: Successfully initiated with 16 tasks and 4 threads
+
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000003.mpit
+Extrae: Deallocating memory.
+Extrae: Application has ended. Tracing has been terminated.
+Extrae: Proceeding with the merge of the intermediate tracefiles.
+Extrae: Waiting for all tasks to reach the checkpoint.
+Extrae: Executing the merge process (using /scratch/shared/maximem/7240432/TRACE.mpits).
+merger: Extrae 3.6.1
+mpi2prv: Tree order is set to 16
+mpi2prv: Assigned nodes < tcn1677.bullx, tcn1677.bullx, tcn1677.bullx, tcn1677.bullx, tcn1677.bullx, tcn1677.bullx, tcn1677.bullx, tcn1677.bullx, tcn1678.bullx, tcn1678.bullx, tcn1678.bullx, tcn1678.bullx, tcn1678.bullx, tcn1678.bullx, tcn1678.bullx, tcn1678.bullx >
+mpi2prv: Assigned size per processor < 829 Mbytes, 796 Mbytes, 796 Mbytes, 828 Mbytes, 828 Mbytes, 781 Mbytes, 789 Mbytes, 828 Mbytes, 814 Mbytes, 781 Mbytes, 796 Mbytes, 828 Mbytes, 828 Mbytes, 796 Mbytes, 796 Mbytes, 828 Mbytes >
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000000.mpit is object 1.1.1 on node tcn1677.bullx assigned to processor 0
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000001.mpit is object 1.1.2 on node tcn1677.bullx assigned to processor 0
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000002.mpit is object 1.1.3 on node tcn1677.bullx assigned to processor 0
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029510000000000003.mpit is object 1.1.4 on node tcn1677.bullx assigned to processor 0
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000000.mpit is object 1.2.1 on node tcn1677.bullx assigned to processor 1
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000001.mpit is object 1.2.2 on node tcn1677.bullx assigned to processor 1
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000002.mpit is object 1.2.3 on node tcn1677.bullx assigned to processor 1
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000003.mpit is object 1.2.4 on node tcn1677.bullx assigned to processor 1
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000000.mpit is object 1.3.1 on node tcn1677.bullx assigned to processor 2
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000001.mpit is object 1.3.2 on node tcn1677.bullx assigned to processor 2
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000002.mpit is object 1.3.3 on node tcn1677.bullx assigned to processor 2
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000003.mpit is object 1.3.4 on node tcn1677.bullx assigned to processor 2
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000000.mpit is object 1.4.1 on node tcn1677.bullx assigned to processor 3
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000001.mpit is object 1.4.2 on node tcn1677.bullx assigned to processor 3
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000002.mpit is object 1.4.3 on node tcn1677.bullx assigned to processor 3
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000003.mpit is object 1.4.4 on node tcn1677.bullx assigned to processor 3
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000000.mpit is object 1.5.1 on node tcn1677.bullx assigned to processor 4
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000001.mpit is object 1.5.2 on node tcn1677.bullx assigned to processor 4
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000002.mpit is object 1.5.3 on node tcn1677.bullx assigned to processor 4
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000003.mpit is object 1.5.4 on node tcn1677.bullx assigned to processor 4
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000000.mpit is object 1.6.1 on node tcn1677.bullx assigned to processor 5
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000001.mpit is object 1.6.2 on node tcn1677.bullx assigned to processor 5
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000002.mpit is object 1.6.3 on node tcn1677.bullx assigned to processor 5
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000003.mpit is object 1.6.4 on node tcn1677.bullx assigned to processor 5
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000000.mpit is object 1.7.1 on node tcn1677.bullx assigned to processor 6
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000001.mpit is object 1.7.2 on node tcn1677.bullx assigned to processor 6
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000002.mpit is object 1.7.3 on node tcn1677.bullx assigned to processor 6
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000003.mpit is object 1.7.4 on node tcn1677.bullx assigned to processor 6
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000000.mpit is object 1.8.1 on node tcn1677.bullx assigned to processor 7
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000001.mpit is object 1.8.2 on node tcn1677.bullx assigned to processor 7
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000002.mpit is object 1.8.3 on node tcn1677.bullx assigned to processor 7
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000003.mpit is object 1.8.4 on node tcn1677.bullx assigned to processor 7
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000000.mpit is object 1.9.1 on node tcn1678.bullx assigned to processor 8
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000001.mpit is object 1.9.2 on node tcn1678.bullx assigned to processor 8
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000002.mpit is object 1.9.3 on node tcn1678.bullx assigned to processor 8
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000003.mpit is object 1.9.4 on node tcn1678.bullx assigned to processor 8
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000000.mpit is object 1.10.1 on node tcn1678.bullx assigned to processor 9
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000001.mpit is object 1.10.2 on node tcn1678.bullx assigned to processor 9
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000002.mpit is object 1.10.3 on node tcn1678.bullx assigned to processor 9
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000003.mpit is object 1.10.4 on node tcn1678.bullx assigned to processor 9
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000000.mpit is object 1.11.1 on node tcn1678.bullx assigned to processor 10
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000001.mpit is object 1.11.2 on node tcn1678.bullx assigned to processor 10
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000002.mpit is object 1.11.3 on node tcn1678.bullx assigned to processor 10
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000003.mpit is object 1.11.4 on node tcn1678.bullx assigned to processor 10
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000000.mpit is object 1.12.1 on node tcn1678.bullx assigned to processor 11
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000001.mpit is object 1.12.2 on node tcn1678.bullx assigned to processor 11
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000002.mpit is object 1.12.3 on node tcn1678.bullx assigned to processor 11
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000003.mpit is object 1.12.4 on node tcn1678.bullx assigned to processor 11
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000000.mpit is object 1.13.1 on node tcn1678.bullx assigned to processor 12
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000001.mpit is object 1.13.2 on node tcn1678.bullx assigned to processor 12
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000002.mpit is object 1.13.3 on node tcn1678.bullx assigned to processor 12
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000003.mpit is object 1.13.4 on node tcn1678.bullx assigned to processor 12
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000000.mpit is object 1.14.1 on node tcn1678.bullx assigned to processor 13
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000001.mpit is object 1.14.2 on node tcn1678.bullx assigned to processor 13
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000002.mpit is object 1.14.3 on node tcn1678.bullx assigned to processor 13
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000003.mpit is object 1.14.4 on node tcn1678.bullx assigned to processor 13
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000000.mpit is object 1.15.1 on node tcn1678.bullx assigned to processor 14
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000001.mpit is object 1.15.2 on node tcn1678.bullx assigned to processor 14
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000002.mpit is object 1.15.3 on node tcn1678.bullx assigned to processor 14
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000003.mpit is object 1.15.4 on node tcn1678.bullx assigned to processor 14
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000000.mpit is object 1.16.1 on node tcn1678.bullx assigned to processor 15
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000001.mpit is object 1.16.2 on node tcn1678.bullx assigned to processor 15
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000002.mpit is object 1.16.3 on node tcn1678.bullx assigned to processor 15
+mpi2prv: File /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000003.mpit is object 1.16.4 on node tcn1678.bullx assigned to processor 15
+mpi2prv: Time synchronization has been turned on
+mpi2prv: A total of 11 symbols were imported from /scratch/shared/maximem/7240432/TRACE.sym file
+mpi2prv: 0 function symbols imported
+mpi2prv: 11 HWC counter descriptions imported
+mpi2prv: Checking for target directory existance... exists, ok!
+mpi2prv: Selected output trace format is Paraver
+mpi2prv: Stored trace format is Paraver
+mpi2prv: Searching synchronization points... done
+mpi2prv: Enabling Time Synchronization (Node).
+mpi2prv: Circular buffer enabled at tracing time? NO
+mpi2prv: Parsing intermediate files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003189000009000003.mpit
+mpi2prv: Processor 9 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029516000007000003.mpit
+mpi2prv: Processor 7 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029511000001000003.mpit
+mpi2prv: Processor 1 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029513000006000003.mpit
+mpi2prv: Processor 6 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003191000014000003.mpit
+mpi2prv: Processor 14 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003190000013000003.mpit
+mpi2prv: Processor 13 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029515000005000003.mpit
+mpi2prv: Processor 5 succeeded to translate its assigned files
+mpi2prv: Processor 0 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029506000004000003.mpit
+mpi2prv: Processor 4 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003187000015000003.mpit
+mpi2prv: Processor 15 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029512000002000003.mpit
+mpi2prv: Processor 2 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1677.bullx.0000029514000003000003.mpit
+mpi2prv: Processor 3 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003183000011000003.mpit
+mpi2prv: Processor 11 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003184000010000003.mpit
+mpi2prv: Processor 10 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003185000008000003.mpit
+mpi2prv: Processor 8 succeeded to translate its assigned files
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000000.mpit
+Extrae: Intermediate raw sym file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000000.sym
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000001.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000002.mpit
+Extrae: Intermediate raw trace file created : /scratch/shared/maximem/7240432/set-0/TRACE@tcn1678.bullx.0000003186000012000003.mpit
+mpi2prv: Processor 12 succeeded to translate its assigned files
+mpi2prv: Elapsed time translating files: 0 hours 0 minutes 28 seconds
+mpi2prv: Gathering addresses across processors... done
+mpi2prv: Elapsed time broadcasting and sorting addresses: 0 hours 0 minutes 1 seconds
+mpi2prv: Starting the distribution of foreign receives.
+mpi2prv: Processor 0 is storing 413338 foreign receives (19778 Kbytes) for the next phase.
+mpi2prv: Ended the distribution of foreign receives.
+mpi2prv: Sharing information < MPImpi2prv: Processor 2 is storing 373946 foreign receives (17893 Kbytes) for the next phase.
+mpi2prv: Processor 4 is storing 386385 foreign receives (18489 Kbytes) for the next phase.
+mpi2prv: Processor 5 is storing 345382 foreign receives (16527 Kbytes) for the next phase.
+mpi2prv: Processor 6 is storing 347036 foreign receives (16606 Kbytes) for the next phase.
+mpi2prv: Processor 7 is storing 389200 foreign receives (18623 Kbytes) for the next phase.
+mpi2prv: Processor 8 is storing 358270 foreign receives (17143 Kbytes) for the next phase.
+mpi2prv: Processor 1 is storing 373898 foreign receives (17891 Kbytes) for the next phase.
+mpi2prv: Processor 3 is storing 396617 foreign receives (18978 Kbytes) for the next phase.
+ OpenMP pthread CUDA HWCmpi2prv: Processor 9 is storing 355434 foreign receives (17008 Kbytes) for the next phase.
+mpi2prv: Processor 10 is storing 355418 foreign receives (17007 Kbytes) for the next phase.
+mpi2prv: Processor 11 is storing 395378 foreign receives (18919 Kbytes) for the next phase.
+mpi2prv: Processor 12 is storing 376242 foreign receives (18003 Kbytes) for the next phase.
+mpi2prv: Processor 13 is storing 374012 foreign receives (17897 Kbytes) for the next phase.
+ MISCmpi2prv: Processor 14 is storing 374030 foreign receives (17897 Kbytes) for the next phase.
+ callersmpi2prv: Processor 15 is storing 413535 foreign receives (19788 Kbytes) for the next phase.
+ files >
+mpi2prv: Elapsed time sharing communications: 0 hours 0 minutes 0 seconds
+mpi2prv: Sharing thread accounting information for ptask 0 done
+mpi2prv: Merge tree depth for 16 tasks is 1 levels using a fan-out of 16 leaves
+mpi2prv: Executing merge tree step 1 of 1.
+mpi2prv: Generating tracefile (intermediate buffers of 20971 events)
+         This process can take a while. Please, be patient.
+mpi2prv: Progress ... 5% 10% 15% 20% 25% 30% 35% 40% 45% 50% 55% 60% 65% 70% 75% 80% 85% 90% 95% done
+mpi2prv: Elapsed time on tree step 1: 0 hours 8 minutes 44 seconds
+mpi2prv: Resulting tracefile occupies 14979273318 bytes
+mpi2prv: Removing temporal files... done
+mpi2prv: Elapsed time removing temporal files: 0 hours 0 minutes 1 seconds
+mpi2prv: Congratulations! gmx_mpi.prv has been generated.
