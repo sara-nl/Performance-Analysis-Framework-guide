@@ -35,7 +35,7 @@ sed -i -e 's/..\/extrae.xml/extrae.xml/g' trace.sh
 #source ${EBROOTEXTRAE}/etc/extrae.sh
 #export EXTRAE_CONFIG_FILE=extrae.xml
 #export LD_PRELOAD=${EBROOTEXTRAE}/lib/libompitrace.so
-export TRACE_NAME=${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_extrae-ldpreload.prv  # -> is not taken into account...
+export TRACE_NAME=${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_extrae-ldpreload.prv
 
 # print information about the job to stdout
 echo "========================================================="
@@ -56,4 +56,4 @@ srun -N $NNODES -n $NPROC ./trace.sh ./gmx_mpi mdrun \
 
 # copy back results to home directory
 mkdir ${RESULTDIR}
-cp -r ${SLURM_JOB_ID}_*  ${RESULTDIR}
+cp -r ${SLURM_JOB_ID}_* *.prv *.row *.pcf  ${RESULTDIR}
