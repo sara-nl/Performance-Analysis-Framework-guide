@@ -164,11 +164,6 @@ load imbalance.
     - The second column reports the average IPC achieved by each process in the computation bursts.
     - The entry “Avg/Max” measures the imbalance in IPC. A value of 1 is ideal. a value of 0.9 would mean you would loose 10% of potential performance if the application was perfectly balanced from the computational point of view.
 
-See (paraver reference guide)[https://tools.bsc.es/doc/html/extrae/xml.html#subsec-processorperformancecounters] for more information about Extrae performance counters.
-*Warning:* Some architectures do not allow grouping some performance counters in the same set. On Cartesius Broadwell, there are compatibility problems with PAPI_TOT_CYC which can make getting the IPC metric complicated. With only PAPI_TOT_CYC,PAPI_TOT_INS,PAPI_LD_INS,PAPI_SR_INS we get the IPC.
-*Remark:* It could be interesting to get the cache misses too, e.g. PAPI_L1_LDM, PAPI_L1_STM,PAPI_L1_TCM, PAPI_L2_TCM, but they seem incompatible with PAPI_TOT_CYC, so they should be in a different set of counters, and then alternate between the two sets during execution.
-*Remark:* sampling can be enable to gather information each time a specified counter reaches a specific value, for example every 100M cycles.
-
 4. If the IPC is not good or well balanced, you may want to look at cache misses.
   If the communication time seems to be a problem it may actually not be due to communication but to local (or microscopic) load imbalances or serialization.
   In order to identify this effect, a Dimemas simulation is required.
@@ -177,6 +172,14 @@ See (paraver reference guide)[https://tools.bsc.es/doc/html/extrae/xml.html#subs
     - Ideally, vertical lines should appear, showing that all processes spend take same time for all computation phases.
     - If you pop up the control window you will see the time distribution.
     - If you are interested on a special range of durations where the histogram shows a wide stripe where the duration of a computation phase is different for different processors you may click on the “Open Control Window Zoom 2D” and select the range of durations and processors you are interested. You will get a timeline for only the range of durations and processors you have selected.
+
+See (paraver reference guide)[https://tools.bsc.es/doc/html/extrae/xml.html#subsec-processorperformancecounters] for more information about Extrae performance counters.
+
+*Warning:* Some architectures do not allow grouping some performance counters in the same set. On Cartesius Broadwell, there are compatibility problems with PAPI_TOT_CYC which can make getting the IPC metric complicated. With only PAPI_TOT_CYC,PAPI_TOT_INS,PAPI_LD_INS,PAPI_SR_INS we get the IPC.
+
+*Remark:* It could be interesting to get the cache misses too, e.g. PAPI_L1_LDM, PAPI_L1_STM,PAPI_L1_TCM, PAPI_L2_TCM, but they seem incompatible with PAPI_TOT_CYC, so they should be in a different set of counters, and then alternate between the two sets during execution.
+
+*Remark:* sampling can be enable to gather information each time a specified counter reaches a specific value, for example every 100M cycles.
 
 
 ##### Simulating hardware with Dimemas
