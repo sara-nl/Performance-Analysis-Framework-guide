@@ -24,7 +24,6 @@ export WORKDIR=/scratch-shared/${USER}/${SLURM_JOB_ID}
 mkdir -p $WORKDIR
 cp ${GROMACSINSTALLDIR}/bin/gmx_mpi ${GROMACSTESTCASEDIR}/${INPUTFILENAME} ${WORKDIR}
 cp ${GROMACSTESTCASEDIR}/${FILTERFILENAME} ${WORKDIR}
-cd $WORKDIR
 
 # Use 'default' trace.sh and extrae.xml files if TRACE_SCRIPT and EXTRAE_CONFIG_FILE were not passed as environment variables to sbatch
 if [ `echo $TRACE_SCRIPT | wc -m` == 1 ]
@@ -38,9 +37,12 @@ fi
 
 # get the extrae configuration files and make changes to it if necessary
 #cp ${EBROOTEXTRAE}/share/example/MPI+OMP/extrae.xml .
-cp ${EXTRAE_CONFIG_FILE} extrae.xml
-cp ${TRACE_SCRIPT} .
-sed -i -e 's/..\/extrae.xml/extrae.xml/g' ${TRACE_SCRIPT}
+cp ${EXTRAE_CONFIG_FILE} ${WORKDIR}
+cp ${TRACE_SCRIPT} ${WORKDIR}
+#sed -i -e 's/..\/extrae.xml/extrae.xml/g' ${TRACE_SCRIPT}
+
+# cd to the working directory (on scratch)
+cd $WORKDIR
 
 # set Extrae variables
 #source ${EBROOTEXTRAE}/etc/extrae.sh
