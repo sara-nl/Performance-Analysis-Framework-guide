@@ -17,14 +17,20 @@ export TESTCASE=ion_channel
 export INPUTFILENAME=ion_channel.tpr
 export RESULTDIR=${SLURM_SUBMIT_DIR}/${SLURM_JOB_ID}_gromacs_$TESTCASE_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling
 export WORKDIR=/scratch-shared/${USER}/${SLURM_JOB_ID}
+export FILTERFILENAME=scorep-gromacs.filt
 
 # setup the measurement environment
 export SCOREP_PROFILING=true
-export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
+# Use a 'default' set of PAPI metrics if PAPI_METRICS was not passed as environment variable to sbatch
+if [ echo $PAPI_METRICS | wc -m == 1 ]
+then
+  export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
+fi
 
 # copy executable and input directory to workdir
 mkdir -p $WORKDIR
 cp ${GROMACSINSTALLDIR}/bin/gmx_mpi ${GROMACSTESTCASEDIR}/${INPUTFILENAME} ${WORKDIR}
+cp ${GROMACSTESTCASEDIR}/${FILTERFILENAME} ${WORKDIR}
 cd $WORKDIR
 
 # print information about the job to stdout
@@ -38,6 +44,7 @@ echo "Running testcase ${TESTCASE} on ${NNODES} nodes / ${NPROC} MPI processes /
 echo "========================================================="
 echo ""
 # run test case
+SCOREP_FILTERING_FILE=${FILTERFILENAME} \
 SCOREP_METRIC_PAPI=${PAPI_METRICS} \
 SCOREP_ENABLE_PROFILING=${SCOREP_PROFILING} \
 SCOREP_EXPERIMENT_DIRECTORY=${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling \

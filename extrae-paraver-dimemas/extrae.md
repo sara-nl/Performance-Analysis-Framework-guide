@@ -47,7 +47,7 @@ For an hybrid OpenMP+MPI application:
 ## Running a job with Extrae instrumentation using the LD_PRELOAD mechanism
 Run your job using a modified command of the type: `srun -N $NNODES -n $NPROC ./trace.sh ./<your_executable`.
 
-A full example of a job script using Extrae for GROMACS can be found here: [ion_channel_2N.extrae_ldpreload.job](batch_scripts/ion_channel_2N.extrae_ldpreload.job).
+A full example of a job script using Extrae for GROMACS can be found here: [ion_channel.extrae_ldpreload.job](batch_scripts/ion_channel.extrae_ldpreload.job).
 
 *Warning:* For this particular example, we get warnings: `Extrae: WARNING! omp_get_thread_num_real is a NULL pointer. Did the initialization of this module trigger? Retrying initialization...`. This does not seem to compromise the trace generation or the execution.
 

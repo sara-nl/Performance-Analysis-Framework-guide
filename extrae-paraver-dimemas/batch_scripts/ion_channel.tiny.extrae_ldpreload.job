@@ -26,13 +26,21 @@ cp ${GROMACSINSTALLDIR}/bin/gmx_mpi ${GROMACSTESTCASEDIR}/${INPUTFILENAME} ${WOR
 cp ${GROMACSTESTCASEDIR}/${FILTERFILENAME} ${WORKDIR}
 cd $WORKDIR
 
+# Use 'default' trace.sh and extrae.xml files if TRACE_SCRIPT and EXTRAE_CONFIG_FILE were not passed as environment variables to sbatch
+if [ echo $TRACE_SCRIPT | wc -m == 1 ]
+then
+  export TRACE_SCRIPT=${EBROOTEXTRAE}/share/example/MPI+OMP/ld-preload/trace.sh
+fi
+if [ echo $EXTRAE_CONFIG_FILE | wc -m == 1 ]
+then
+  export EXTRAE_CONFIG_FILE=${EBROOTEXTRAE}/share/example/MPI+OMP/ld-preload/extrae.xml
+fi
+
 # get the extrae configuration files and make changes to it if necessary
 #cp ${EBROOTEXTRAE}/share/example/MPI+OMP/extrae.xml .
-cp ${GROMACSTESTCASEDIR}/extrae-cfgs/extrae_papi-counters.xml extrae.xml
-cp ${EBROOTEXTRAE}/share/example/MPI+OMP/ld-preload/trace.sh .
-sed -i -e 's/..\/extrae.xml/extrae.xml/g' trace.sh
-# sed -i 's/PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_L1_DCM,PAPI_L2_DCM,PAPI_L3_TCM,PAPI_BR_INS,PAPI_BR_MSP,RESOURCE_STALLS/PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP,PAPI_L1_TCM,PAPI_L2_TCM,PAPI_L1_DCM,PAPI_L2_DCM,PAPI_L3_TCM,,PAPI_BR_INS,PAPI_BR_MSP,RESOURCE_STALLS,PAPI_LD_INS,PAPI_SR_INS,PAPI_LST_INS,PAPI_RES_STL,PAPI_L1_TCM,PAPI_L2_TCM,PAPI_L1_DCM,PAPI_L2_DCM,PAPI_L2_DCA,PAPI_L3_DCA,PAPI_LD_INS,PAPI_SR_INS,PAPI_LST_INS/g' extrae.xml
-
+cp ${EXTRAE_CONFIG_FILE} extrae.xml
+cp ${TRACE_SCRIPT} .
+sed -i -e 's/..\/extrae.xml/extrae.xml/g' ${TRACE_SCRIPT}
 
 # set Extrae variables
 #source ${EBROOTEXTRAE}/etc/extrae.sh
@@ -52,7 +60,7 @@ echo "========================================================="
 echo ""
 # run test case
 OMP_NUM_THREADS=$NTHREADS \
-srun -N $NNODES -n $NPROC ./trace.sh ./gmx_mpi mdrun \
+srun -N $NNODES -n $NPROC ./${TRACE_SCRIPT} ./gmx_mpi mdrun \
     -s ${INPUTFILENAME} -maxh 0.50 -noconfout -nsteps 1000 \
     -g ${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_extrae-ldpreload.log \
 &> ${SLURM_JOB_ID}_stdouterr_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_extrae-ldpreload.log

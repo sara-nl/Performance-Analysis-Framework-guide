@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH -J gromacs-scorep
-#SBATCH -t 01:00:00
+#SBATCH -t 04:00:00
 #SBATCH -p broadwell
 #SBATCH -N 2
 #SBATCH -n 16
@@ -15,13 +15,19 @@ export NPROC=$SLURM_NTASKS
 export NTHREADS=$SLURM_CPUS_PER_TASK
 export TESTCASE=ion_channel
 export INPUTFILENAME=ion_channel.tpr
-export RESULTDIR=${SLURM_SUBMIT_DIR}/${SLURM_JOB_ID}_gromacs_$TESTCASE_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling
+export RESULTDIR=${SLURM_SUBMIT_DIR}/${SLURM_JOB_ID}_gromacs_$TESTCASE_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_tracing
 export WORKDIR=/scratch-shared/${USER}/${SLURM_JOB_ID}
 export FILTERFILENAME=scorep-gromacs.filt
 
 # setup the measurement environment
 export SCOREP_PROFILING=true
-export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
+export SCOREP_TRACING=true
+export SCOREP_MEM="1GB"
+# Use a 'default' set of PAPI metrics if PAPI_METRICS was not passed as environment variable to sbatch
+if [ echo $PAPI_METRICS | wc -m == 1 ]
+then
+  export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
+fi
 
 # copy executable and input directory to workdir
 mkdir -p $WORKDIR
@@ -40,15 +46,17 @@ echo "Running testcase ${TESTCASE} on ${NNODES} nodes / ${NPROC} MPI processes /
 echo "========================================================="
 echo ""
 # run test case
+SCOREP_ENABLE_TRACING=${SCOREP_TRACING} \
+SCOREP_TOTAL_MEMORY=${SCOREP_MEM} \
 SCOREP_FILTERING_FILE=${FILTERFILENAME} \
 SCOREP_METRIC_PAPI=${PAPI_METRICS} \
 SCOREP_ENABLE_PROFILING=${SCOREP_PROFILING} \
-SCOREP_EXPERIMENT_DIRECTORY=${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling \
+SCOREP_EXPERIMENT_DIRECTORY=${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_tracing \
 OMP_NUM_THREADS=$NTHREADS \
 srun -N $NNODES -n $NPROC gmx_mpi mdrun \
     -s ${INPUTFILENAME} -maxh 0.50 -resethway -noconfout -nsteps 10000 \
-    -g ${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling.log \
-&> ${SLURM_JOB_ID}_stdouterr_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_profiling.log
+    -g ${SLURM_JOB_ID}_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_tracing.log \
+&> ${SLURM_JOB_ID}_stdouterr_gromacs_${TESTCASE}_${NNODES}N_${NPROC}P_${NTHREADS}T_scorep_tracing.log
 
 # copy back results to home directory
 mkdir ${RESULTDIR}

@@ -94,9 +94,9 @@ cd gromacs_testcase
 wget https://repository.prace-ri.eu/ueabs/GROMACS/1.2/GROMACS_TestCaseA.tar.gz
 tar xzf GROMACS_TestCaseA.tar.gz
 ```
-Download [ion_channel_2N.reference.job](batch_scripts/ion_channel_2N.reference.job) and run the testcase:
+Download [ion_channel.reference.job](batch_scripts/ion_channel.reference.job) and run the testcase:
 ```
-sbatch ion_channel_2N.reference.job
+sbatch ion_channel.reference.job
 ```
 
 ##### 2 - Preparation
@@ -150,10 +150,10 @@ Set up the measurement environment in the batch script, e.g. to use PAPI metrics
 export SCORE_ENABLEP_PROFILING=true
 export SCOREP_METRIC_PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 ```
-Download [ion_channel_2N.scorep_profiling.job](batch_scripts/ion_channel_2N.scorep_profiling.job) and run the testcase:
+Download [ion_channel.scorep_profiling.job](batch_scripts/ion_channel.scorep_profiling.job) and run the testcase:
 ```
 cd ~/gromacs_testcase
-sbatch ion_channel_2N.scorep_profiling.job
+sbatch ion_channel.scorep_profiling.job
 ```
 
 #### 4 - Comparison with reference runtime
@@ -244,7 +244,7 @@ flt     type     max_buf[B]        visits  time[s] time[%] time/visit[us]  regio
  -    SCOREP             96            12     0.09     0.0        7818.95  SCOREP-FLT
 ```
 
-And finally do the profiling run with Score-P using the filter. (use e.g. [ion_channel_2N.scorep_profiling_filter.job](batch_scripts/ion_channel_2N.scorep_profiling_filter.job)).
+And finally do the profiling run with Score-P using the filter. (use e.g. [ion_channel.scorep_profiling_filter.job](batch_scripts/ion_channel.scorep_profiling_filter.job)).
 In this case we still have a large overhead, but the size of the trace will be more reasonable.
 
 #### 4 bis: selective recording
@@ -298,7 +298,7 @@ SCOREP_TOTAL_MEMORY=1GB
 
 
 #### 7 - Run with tracing enabled
-Then using [ion_channel_2N.scorep_tracing.job](batch_scripts/ion_channel_2N.scorep_tracing.job) with an adequate filter, we run the `ion_channel` testcase again to collect the execution trace.
+Then using [ion_channel.scorep_tracing.job](batch_scripts/ion_channel.scorep_tracing.job) with an adequate filter, we run the `ion_channel` testcase again to collect the execution trace.
 On Cartesius Haswell, this takes the same time as a profiling run with Score-P:
 ```
 Core t (s)   Wall t (s)        (%)
