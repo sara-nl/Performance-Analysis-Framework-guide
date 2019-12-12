@@ -26,10 +26,21 @@ cp ${GROMACSINSTALLDIR}/bin/gmx_mpi ${GROMACSTESTCASEDIR}/${INPUTFILENAME} ${WOR
 cp ${GROMACSTESTCASEDIR}/${FILTERFILENAME} ${WORKDIR}
 cd $WORKDIR
 
+# Use 'default' trace.sh and extrae.xml files if TRACE_SCRIPT and EXTRAE_CONFIG_FILE were not passed as environment variables to sbatch
+if [ `echo $TRACE_SCRIPT | wc -m` == 1 ]
+then
+  export TRACE_SCRIPT=${EBROOTEXTRAE}/share/example/MPI+OMP/ld-preload/trace.sh
+fi
+if [ `echo $EXTRAE_CONFIG_FILE | wc -m` == 1 ]
+then
+  export EXTRAE_CONFIG_FILE=${EBROOTEXTRAE}/share/example/MPI+OMP/ld-preload/extrae.xml
+fi
+
 # get the extrae configuration files and make changes to it if necessary
-cp ${EBROOTEXTRAE}/share/example/MPI+OMP/extrae.xml .
-cp ${EBROOTEXTRAE}/share/example/MPI+OMP/ld-preload/trace.sh .
-sed -i -e 's/..\/extrae.xml/extrae.xml/g' trace.sh
+#cp ${EBROOTEXTRAE}/share/example/MPI+OMP/extrae.xml .
+cp ${EXTRAE_CONFIG_FILE} extrae.xml
+cp ${TRACE_SCRIPT} .
+sed -i -e 's/..\/extrae.xml/extrae.xml/g' ${TRACE_SCRIPT}
 
 # set Extrae variables
 #source ${EBROOTEXTRAE}/etc/extrae.sh

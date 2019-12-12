@@ -24,7 +24,7 @@ Then a normal run will use the LD_PRELOAD mechanism and generate an xml file con
 IPM can collects PAPI metrics.
 In our module, the default set of PAPI metrics that are gathered is:
 ```
-IPM_HPM=PAPI_TOT_INS,PAPI_L1_DCM,PAPI_LST_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_RES_STL,PAPI_STL_ICY,PAPI_STL_CCY
+IPM_HPM="PAPI_TOT_INS,PAPI_L1_DCM,PAPI_LST_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_RES_STL,PAPI_STL_ICY,PAPI_STL_CCY"
 ```
 This can be tuned by modifying the environment variable `IPM_HPM`.
 
@@ -33,7 +33,7 @@ IPM accepts a few options:
 ```
 export IPM_REPORT=full
 export IPM_LOGDIR=$RESULTDIR
-export IPM_HPM=PAPI_TOT_INS,PAPI_L1_DCM,PAPI_LST_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_RES_STL,PAPI_STL_ICY,PAPI_STL_CCY
+export IPM_HPM="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 ```
 
 

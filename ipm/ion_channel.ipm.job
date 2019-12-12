@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH -J gromacs
 #SBATCH -t 01:00:00
-#SBATCH -p short
+#SBATCH -p broadwell
 #SBATCH -N 2
-#SBATCH -n 12
+#SBATCH -n 16
 #SBATCH -c 4
 module load 2019
 module load foss/2018b
@@ -18,7 +18,7 @@ export TESTCASE=ion_channel
 export INPUTFILENAME=ion_channel.tpr
 export RESULTDIR=${SLURM_SUBMIT_DIR}/${SLURM_JOB_ID}_gromacs_ipm_$TESTCASE_${NNODES}N_${NPROC}P_${NTHREADS}T
 export WORKDIR=/scratch-shared/${USER}/${SLURM_JOB_ID}
-
+set -x
 mkdir ${RESULTDIR}
 
 # copy executable and input directory to workdir
@@ -40,7 +40,9 @@ echo ""
 # set IPM options
 export IPM_REPORT=full
 export IPM_LOGDIR=$RESULTDIR
-if [ echo $PAPI_METRICS | wc -m == 1 ]
+
+COUNT=``
+if [ `echo $PAPI_METRICS | wc -m` == 1 ]
 then
   export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 fi

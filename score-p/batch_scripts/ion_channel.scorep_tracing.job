@@ -24,7 +24,7 @@ export SCOREP_PROFILING=true
 export SCOREP_TRACING=true
 export SCOREP_MEM="1GB"
 # Use a 'default' set of PAPI metrics if PAPI_METRICS was not passed as environment variable to sbatch
-if [ echo $PAPI_METRICS | wc -m == 1 ]
+if [ `echo $PAPI_METRICS | wc -m` == 1 ]
 then
   export PAPI_METRICS="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 fi
