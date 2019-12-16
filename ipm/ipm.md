@@ -1,10 +1,24 @@
 # IPM
+IPM is a portable profiling infrastructure for parallel codes.
+
+It provides a low-overhead performance summary of the computation and communication in a parallel program.
+The amount of detailed reported is selectable at runtime via environment variables or through a MPI_Pcontrol interface.
+
+IPM has extremely low overhead, is scalable and easy to use requiring no source code modification.
+
+
 http://ipm-hpc.sourceforge.net/usage.html
 
 from NERSC userinfo: https://www.nersc.gov/users/software/performance-and-debugging-tools/ipm/
 https://docs.nersc.gov/programming/performance-debugging-tools/ipm/
 
 from POP-COE: https://pop-coe.eu/further-information/learning-material/profilingimpi
+
+
+
+One can add user-defined regions and events in the source code using 'MPI_Pcontrol' (c.f. http://ipm-hpc.sourceforge.net/usage.html)
+
+IPM does not
 
 #### INTEL
 Set
@@ -18,8 +32,6 @@ Set
 export I_MPI_STATS_FILE=prof.dat
 ```
 to specify the file (here 'prof.dat') where to generate the IPM report.
-
-One can add user-defined regions and events in the source code using 'MPI_Pcontrol'.
 
 + use other IPM options if needed
 
@@ -48,7 +60,6 @@ export IPM_LOGDIR=$RESULTDIR
 export IPM_HPM="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"
 ```
 
-
 #### automatic computation of the POP metrics
 use my python scripts:
 [ipm-foss_compute_POP-metrics.py](ipm-foss_compute_POP-metrics.py)
@@ -59,6 +70,8 @@ use my python scripts:
 
 
 ## Collecting of PAPI counters with IPM
+*Warning:* PAPI counters are collected for each MPI process, IPM does not support threads. 
+
 With a simple matvec example: [matvec.cpp](matvec/matvec.cpp), and a modified version with a lot of cache misses: [matvec_loop-interchange.cpp](matvec/matvec_loop-interchange.cpp), try different setsof PAPI counters.
 ```
 module load 2019
@@ -83,5 +96,7 @@ Note that:
 - "PAPI_L2_TCA" (total L2 cache accesses) goes from 3523786 to 556664816 (more than 150x increase),
 - "PAPI_L3_TCM" (total L3 cache misses) goes from  9980157 to 14652164 (about 1.5x increase),
 - "PAPI_L3_TCA" (total L3 cache accesses) goes from 11010723 to 711205301 (more than 60x increase)
+*Remark:* the number of L2 cache misses is greater than the number of cache accesses.. How is that possible ?
+
 
 With `export IPM_HPM="PAPI_TOT_INS,PAPI_TOT_CYC,PAPI_REF_CYC,PAPI_SP_OPS,PAPI_DP_OPS,PAPI_VEC_SP,PAPI_VEC_DP"`, we can see that the loop is not vectorized, as the number of vectorized operations and instructions is almost 0.
