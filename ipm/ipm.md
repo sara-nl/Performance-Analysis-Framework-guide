@@ -18,7 +18,6 @@ from POP-COE: https://pop-coe.eu/further-information/learning-material/profiling
 
 One can add user-defined regions and events in the source code using 'MPI_Pcontrol' (c.f. http://ipm-hpc.sourceforge.net/usage.html)
 
-IPM does not
 
 #### INTEL
 Set
@@ -70,7 +69,7 @@ use my python scripts:
 
 
 ## Collecting of PAPI counters with IPM
-*Warning:* PAPI counters are collected for each MPI process, IPM does not support threads. 
+*Warning:* PAPI counters are collected for each MPI process, IPM does not support threads.
 
 With a simple matvec example: [matvec.cpp](matvec/matvec.cpp), and a modified version with a lot of cache misses: [matvec_loop-interchange.cpp](matvec/matvec_loop-interchange.cpp), try different setsof PAPI counters.
 ```
