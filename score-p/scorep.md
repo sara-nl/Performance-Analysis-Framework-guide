@@ -269,6 +269,29 @@ And we set the environment variable `SCOREP_SELECTIVE_CONFIG_FILE=scorep-selecti
 
 *TODO:* MAKE IT WORK !!!!
 
+#### 4 ter: Phase instrumentation
+To profile / trace only the relevant kernels, one can use phase instrumentation with Score-P.
+
+From https://www.readex.eu/index.php/score-p/ :
+
+Phase instrumentation is manual (since mostly the phase is not an explicit region like a code function. To enable phase instrumentation, find the Phase of your program. I usually do this with a profile or trace analysis. Then add the following lines:
+
+In Fortran:
+- Include Score-P header (near the other includes): `#include <scorep/SCOREP_User.inc>`
+- Define phase: SCOREP_USER_REGION_DEFINE(phase) in the beginning of the function where the phase is located
+- Tag the start of the phase (usually right after the do-loop header) `SCOREP_USER_OA_PHASE_BEGIN(phase, "Loop-phase", 2)`
+- Tag the end of the phase (usually right before the do-loop is left) `SCOREP_USER_OA_PHASE_END(phase)`
+
+In C/C++:
+- Include Score-P header (near the other includes): `#include <scorep/SCOREP_User.h>`
+- Define phase: `SCOREP_USER_REGION_DEFINE(phase)` in the beginning of the function where the phase is located
+- Tag the start of the phase (usually right after the do-loop header) `SCOREP_USER_OA_PHASE_BEGIN(phase, "Loop-phase", 2)`
+- Tag the end of the phase (usually right before the do-loop is left) `SCOREP_USER_OA_PHASE_END(phase)`
+
+Recompile afterwards and add the `--user` flag to Score-P. (Do not forget the filter file).
+
+-> I have not tried it yet
+
 
 #### 5 - Analysis of generated performance data
 On Cartesius, we only managed to build CubeGUI with foss, so please use module `CubeGUI/4.4.3-foss-2018b`.
