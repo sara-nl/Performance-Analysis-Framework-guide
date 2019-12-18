@@ -25,14 +25,14 @@ In the `2019` software stack, Easybuild-based modules are available: `Score-P/5.
 
 ## Usage on Cartesius
 The general workflow for a full Score-P analysis is the following:
-1 - **Reference run** and note the runtime.
-2 - **Preparation:** instrument target application and set up the measurement environment.
-3 - **Profiling run with full instrumentation:** run application with measurement infrastructure enabled.
-4 - **Comparison with reference runtime:** compare runtime with the reference runtime to determine the overhead. If the overhead is too high, create a filter file using hints from scorep-score and generate an optimized profile with the filter applied.
-5 - **Analysis of generated performance data:** investigate the profile with Cube.
-6 - **Preparation of run with tracing:** define (or adjust) the filter file for a tracing run using scorep-score.
-7 - **Run with tracing enabled:** Generate a trace with filter applied
-8 - **Analysis of generated trace:** Perform in-depth analysis on the trace data with a trace viewer (Vampir, ViTE, ???)
+- 1 - **Reference run** and note the runtime.
+- 2 - **Preparation:** instrument target application and set up the measurement environment.
+- 3 - **Profiling run with full instrumentation:** run application with measurement infrastructure enabled.
+- 4 - **Comparison with reference runtime:** compare runtime with the reference runtime to determine the overhead. If the overhead is too high, create a filter file using hints from scorep-score and generate an optimized profile with the filter applied.
+- 5 - **Analysis of generated performance data:** investigate the profile with Cube.
+- 6 - **Preparation of run with tracing:** define (or adjust) the filter file for a tracing run using scorep-score.
+- 7 - **Run with tracing enabled:** Generate a trace with filter applied
+- 8 - **Analysis of generated trace:** Perform in-depth analysis on the trace data with a trace viewer (Vampir, ViTE, ???)
 
 ## Full example with gromacs
 
