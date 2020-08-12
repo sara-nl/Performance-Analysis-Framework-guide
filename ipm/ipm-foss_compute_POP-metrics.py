@@ -77,8 +77,9 @@ print "min_mpi: ", min_mpi
 print "max_mpi: ", max_mpi
 # compute pop metrics
 load_balance=(avg_user-avg_mpi)/(max_user-min_mpi)
-communication_efficiency=(max_user-min_mpi)/max_wallclock
-parallel_efficiency=load_balance*communication_efficiency
+communication_efficiency=(max_user-min_mpi)/max_wallclock     # WARNING: this just gives an upper bound on the communication efficiency, the definition is "CommE = maximum computation time / total runtime"
+parallel_efficiency=load_balance*communication_efficiency     # Since the communication efficiency is overestimated, the parallel_efficiency is overestimated too
+
 
 # these metrics are meant to compare a benchmark with different core counts
 #computational_efficiency=reference_total_user/total_user
