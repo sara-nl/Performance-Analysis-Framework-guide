@@ -232,7 +232,7 @@ MAQAO presents a specific panel for some of the POP metrics described in the sec
 
 These metrics can be found inside the "Application" tab in the "Pop Metrics" section. In the next image we show the panel for our example report. You can find the exact formula used to compute each metric by placing the mouse cursor over each metric name.
 
-**Remark: Here the values of the "IPC", "Avarage Frequency" and "Vectorization Efficiency" metrics are not available. This is probably because the binary file was not generated with debug options, but the MAQAO documentation is not clear on this point.**
+**Remark: Here the values of the "IPC", "Avarage Frequency" and "Vectorization Efficiency" metrics are not available. We have not figured out how to make them available, the MAQAO documentation is not clear on this point.**
 
 ![image-20200815180523145](media/image-20200815180523145.png)
 
